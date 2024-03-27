@@ -5,47 +5,44 @@
     <meta name="keywords" content="Erik Roganský, Roganský, Erik" />
     <meta name="description" content="Coming soon!">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            text-align: center;
-        }
-        h1 {
-            font-size: 3em;
-            color: #333;
-            margin-bottom: 20px;
-        }
-        p {
-            font-size: 1.5em;
-            color: #666;
-        }
-        .glow {
-            animation: glow 1.5s ease-in-out infinite alternate;
-        }
-        @keyframes glow {
-            from {
-                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
-            }
-            to {
-                text-shadow: 0 0 20px #fff, 0 0 30px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de, 0 0 200px #ff00de, 0 0 250px #ff00de;
-            }
-        }
-    </style>
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="scripts/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/ac7b36a7a6.js" crossorigin="anonymous"></script>
+    <title>Erik Roganský</title>
 </head>
 <body>
-    <div class="container">
-        <h1 class="glow">Coming Soon</h1>
-        <p>I am working hard to bring you something amazing!</p>
-    </div>
+    <header>
+        <div class="headerContainer">
+            <div></div>
+            <div class="headerCategories">
+                <div class="headerCategoriesGrid">
+                    <label>Home</label>
+                    <label>Services</label>
+                    <label>Education</label>
+                    <label>Skills</label>
+                    <label>Languages</label>
+                    <label>Experience</label>
+                    <label>Contact</label>
+                </div>
+            </div>
+            <div class="headerLanguage">
+                <img src="img/us.png" alt="Flag of USA" id="flagImage">
+            </div>
+        </div>
+    </header>
+
+    <section class="intro">
+        <div class="introIcons">
+            <a href="https://facebook.com/erik.rogansky" target="_blank" class="fa-brands fa-facebook-f"></a>
+            <a href="https://www.linkedin.com/in/erik-rogansk%C3%BD-9b75812a8/" target="_blank" class="fa-brands fa-linkedin-in"></a>
+            <a href="https://instagram.com/erik_rogansky" target="_blank" class="fa-brands fa-instagram"></a>
+            <a href="https://github.com/erikrogansky" target="_blank" class="fa-brands fa-github"></a>
+        </div>
+    </section>
+
+
+    <footer>
+
+    </footer>
 </body>
 </html>
