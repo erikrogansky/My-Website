@@ -1,15 +1,27 @@
-@import url('https://fonts.cdnfonts.com/css/cofo-sans');
+@import url(https://fonts.adobe.com/fonts/cofo-sans-variable#fonts-section);
 
 :root {
     --background-darker: #040825;
     --background-lighter: #270734;
-    --font-color: white
+    --accent-first: #AC3AB6;
+    --accent-second: #C72626;
+    --font-color: #FFF;
 }
 
 body {
     background-image: linear-gradient(150deg, var(--background-darker), var(--background-lighter));
     font-family: 'CoFo Sans', sans-serif;
     font-size: 18px;
+    color: var(--font-color);
+}
+
+/* Color styles */
+.colorful {
+    background: -webkit-linear-gradient(150deg, var(--accent-first), var(--accent-second));
+    background: linear-gradient(150deg, var(--accent-first), var(--accent-second));
+    -webkit-background-clip: text;
+    background-clip: text;;
+    -webkit-text-fill-color: transparent;
 }
 
 
@@ -17,7 +29,6 @@ body {
 .headerContainer {
     display: grid;
     grid-template-columns: 20% 60% 20%;
-    color: var(--font-color);
     padding-top: 0.3em;
 }
 
@@ -36,37 +47,130 @@ body {
 
 .headerLanguage {
     position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-self: flex-end;
+    display: inline-block;
     align-self: center;
     padding-right: 5px;
+    cursor: pointer;
+    margin-left: auto;
+    font-size: 0.75em;
 }
 
 .headerLanguage img {
-    width: 30px;
+    width: 25px;
     height: auto;
     cursor: pointer;
+    display: block;
+}
+
+  
+.headerLanguage:hover .dropdownContent {
+    display: block;
+    filter: blur(3px);
+}
+  
+.headerLanguage .dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 25px;
+    padding: 8px 0;
+    z-index: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(-10px);
+    opacity: 0;
+    filter: blur(0);
+}
+  
+.headerLanguage .dropdownContent img {
+    
+}
+  
+.headerLanguage .dropdownContent img:hover {
+    background-color: transparent;
+    opacity: 0.7;
 }
 
 /* Intro styles */
 .intro {
     display: flex;
-    flex-direction: column;
-    height: 80vh;
+    flex-direction: row;
+
+    height: 94vh;
 }
 
 .introIcons {
     display: grid;
-    color: var(--font-color);
-    font-size: 1.5em;
+    font-size: 1.7em;
     gap: 1.25em;
-    margin-top: auto;
-    margin-bottom: auto;
+    align-self: center;
     margin-left: 0.5em;
 }
 
 .introIcons a {
     text-decoration: none;
     color: var(--font-color);
+}
+
+.introText {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8%;
+    margin-left: 12.5%;
+    width: 28em
+}
+
+.introText label:first-of-type {
+    margin-right: auto;
+}
+
+.introText label:nth-of-type(2) {
+    font-size: 2.66em;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.introText label:nth-of-type(3) {
+    font-size: 1.33em;
+    font-weight: 600;
+}
+
+.introText p {
+    font-size: 17px;
+}
+
+.introText ul {
+    --icon-space: 1.7em;
+    list-style: none;
+    padding: 0;
+    font-size: 17px;
+  }
+  
+.introText li {
+    padding-left: var(--icon-space);
+    padding-bottom: 5px;
+}
+  
+.introText li:before {
+    content: "\f00c"; /* FontAwesome Unicode */
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: calc( var(--icon-space) * -1 + 10px );
+    width: var(--icon-space);
+}
+
+.introText .colorful {
+    font-weight: bold;
+    font-size: 1.75em;
+}
+
+.introText hr {
+    margin-left: 0;
+    margin-right: 0;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, var(--accent-first), var(--accent-second));
+}
+
+.introPhoto {
+    width: 45%;
 }
