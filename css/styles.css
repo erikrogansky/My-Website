@@ -8,6 +8,10 @@
     --font-color: #FFF;
 }
 
+html {
+    background: #1f0730;
+}
+
 body {
     background: linear-gradient(101.5deg, var(--background-darker), var(--background-lighter));
     font-family: 'CoFo Sans', sans-serif;
@@ -25,7 +29,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: linear-gradient(to bottom, #1f0730, var(--background-lighter));
+    background: rgba(0, 0, 0, 0.2);
 }
  
 ::-webkit-scrollbar-thumb { 
