@@ -34,3 +34,9 @@ function changeLanguage(language) {
     document.querySelector('.dropdownContent img:nth-child(2)').style.display = 'block';
   }
 }
+
+const textarea = document.querySelector('.contactForm textarea');
+textarea.addEventListener('input', () => {
+    textarea.style.height = 'auto';
+    textarea.style.height = textarea.scrollHeight + 'px';
+});
