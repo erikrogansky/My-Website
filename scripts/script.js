@@ -102,7 +102,7 @@ function createDonutChart(containerId, percentage) {
 
 function animatePercentageText(percentageText, targetPercentage) {
   let currentPercentage = 0;
-  const animationDuration = 450;
+  const animationDuration = 600;
   const animationSteps = 100;
   const stepPercentage = targetPercentage / animationSteps;
 
