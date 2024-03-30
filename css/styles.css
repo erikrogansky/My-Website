@@ -334,7 +334,7 @@ body {
 
 .educationContent {
     align-self: center;
-    width: 90%;
+    width: 95%;
     padding-top: 3em;
     padding-bottom: 5em;
     font-size: 17px;
@@ -416,19 +416,113 @@ body {
     flex-direction: column;
     padding-top: 3.5em;
     padding-left: 5em;
+    padding-right: 5em;
+    padding-bottom: 3.5em;
 }
 
-.languages label:first-of-type {
+.languages > label:first-of-type {
     font-size: 16px;
     font-weight: bold;
 }
 
-.languages label:last-of-type {
+.languages > label:nth-of-type(2) {
     font-size: 40px;
     font-weight: bold;
 }
 
+.languages > label:nth-of-type(3) {
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2em;
+}
 
+.chart-container {
+    position: relative;
+    width: 225px;
+    height: 225px;
+    display: inline-block;
+    margin: 20px;
+}
+  
+.chart {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+  
+.chart circle {
+    fill: transparent;
+    stroke-width: 30;
+}
+
+.chart .donut-ring {
+    stroke: rgba(255, 255, 255, 0.025);
+    stroke-width: 1.25em;
+}
+
+.chart .donut-segment {
+    stroke-linecap: round;
+    animation: drawDonut 1s ease-in-out forwards;
+    transform-origin: center;
+    stroke-width: 1.25em;
+}
+
+.percentage {
+    font-family: 'CoFo Sans', sans-serif;
+    font-size: 27px;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    fill: var(--font-color);
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+@keyframes drawDonut {
+    from {
+      stroke-dasharray: 0, 440;
+      transform: rotate(-90deg);
+    }
+}
+
+.languagesContent {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    gap: 10em;
+}
+
+.languagesContentAdd {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    gap: 10em;
+}
+
+.languageItem {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.languageItem label:first-of-type{
+    font-size: 30px;
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+
+.languageItem label:nth-of-type(2) {
+    font-size: 17px;
+    padding-bottom: 2.5px;
+}
+
+.languageItem label:nth-of-type(3) {
+    font-size: 15px;
+    font-weight: 100;
+}
 
 
 
@@ -578,8 +672,6 @@ body {
 .contactForm input:-webkit-autofill:active{
     -webkit-background-clip: text;
     -webkit-text-fill-color: #ffffff;
-    transition: background-color 5000s ease-in-out 0s;
-    box-shadow: inset 0 0 20px 20px #23232329;
 }
 
 .contactForm textarea {
