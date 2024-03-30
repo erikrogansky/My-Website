@@ -100,6 +100,25 @@ function createDonutChart(containerId, percentage) {
   updateDonutChart(containerId, percentage);
 }
 
+function animatePercentageText(percentageText, targetPercentage) {
+  let currentPercentage = 0;
+  const animationDuration = 450;
+  const animationSteps = 100;
+  const stepPercentage = targetPercentage / animationSteps;
+
+  function updateText() {
+    if (currentPercentage <= targetPercentage) {
+      percentageText.textContent = `${Math.round(currentPercentage)}%`;
+      currentPercentage += stepPercentage;
+      setTimeout(updateText, animationDuration / animationSteps);
+    } else {
+      percentageText.textContent = `${targetPercentage}%`;
+    }
+  }
+
+  updateText();
+}
+
 function updateDonutChart(containerId, percentage) {
   const donutSegment = document.querySelector(`#${containerId} .donut-segment`);
   const percentageText = document.querySelector(`#${containerId} .percentage`);
@@ -113,6 +132,8 @@ function updateDonutChart(containerId, percentage) {
   donutSegment.style.transform = `rotate(${rotationOffset}deg)`;
 
   percentageText.textContent = `${percentage}%`;
+
+  animatePercentageText(percentageText, percentage);
 }
 
 window.onload = () => {
