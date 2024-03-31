@@ -149,3 +149,24 @@ window.onload = () => {
     createDonutChart(data.id, data.percentage);
   });
 };
+
+/* Animations */
+document.addEventListener("DOMContentLoaded", function(event) {
+  var icons = document.querySelectorAll('.introIcons a');
+  icons.forEach(function(icon, index) {
+    setTimeout(function() {
+      icon.classList.add('slide-in');
+    }, index * 100);
+  });
+
+  var headers = document.querySelectorAll('.headerCategoriesGrid a');
+  var himg = document.getElementById('selectedLanguage');
+  headers.forEach(function(header, index) {
+    setTimeout(function() {
+      header.classList.add('slide-in');
+    }, index * 50);
+  });
+
+    himg.classList.add('slide-in');
+
+});
