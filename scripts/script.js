@@ -150,6 +150,34 @@ window.onload = () => {
   });
 };
 
+
+/* Go to top button */
+function goToTop() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+}
+
+// Show/hide the "go to top" button based on the scroll position
+window.onscroll = function() {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  var footer = document.querySelector('footer');
+  var footerTop = footer.getBoundingClientRect().top;
+  var button = document.getElementById("goToTopBtn");
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    button.style.opacity = "1"; // Set opacity to 1 to make it visible
+    if (footerTop < window.innerHeight) {
+      button.style.bottom = (window.innerHeight - footerTop + 20) + "px";
+    } else {
+      button.style.bottom = "30px";
+    }
+  } else {
+    button.style.opacity = "0"; // Set opacity to 0 to hide it
+  }
+}
+
 /* Animations */
 document.addEventListener("DOMContentLoaded", function(event) {
   var icons = document.querySelectorAll('.introIcons a');
@@ -170,3 +198,27 @@ document.addEventListener("DOMContentLoaded", function(event) {
     himg.classList.add('slide-in');
 
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const elements = document.querySelectorAll('.line-by-line');
+  elements.forEach((element, index) => {
+    element.style.animationDelay = (index * 0.1) + "s"; // Adjust the delay here
+  });
+});
+
+
+/* Arrow down */
+window.addEventListener('scroll', function() {
+  var scrollPosition = window.scrollY;
+  var body = document.querySelector('body');
+  var arrow = document.querySelector('.arrowDown');
+
+  if (scrollPosition > 0) {
+      body.classList.add('scroll');
+  } else {
+      body.classList.remove('scroll');
+      arrow.classList.remove('hidden'); // Show arrow when back to top
+      arrow.classList.add('appear');
+  }
+});
+
