@@ -286,10 +286,9 @@ body {
     color: transparent;
 }
 
-
 /* Services section */
 .services {
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
     background-color: rgba(255, 255, 255, 0.025);
     
     display: flex;
@@ -453,6 +452,7 @@ body {
     flex-direction: column;
     padding-top: 3.5em;
     padding-left: 5em;
+    padding-right: 5em;
 }
 
 .skills label:first-of-type {
@@ -465,7 +465,45 @@ body {
     font-weight: bold;
 }
 
+.skillsContent {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+}
 
+.skillsContent img {
+    width: 6.5em;
+    justify-self: center;
+    align-self: center;
+}
+
+.skillsContent img[src="img/java.png"] {
+    width: 5.1em;
+}
+
+.skillsContent img[src="img/linux.png"] {
+    width: 6.1em;
+}
+
+.skillsContent img[src="img/laravel.png"] {
+    width: 8em;
+}
+
+.skillsContent img[src="img/phrase.png"] {
+    width: 6em;
+}
+
+.skillsContent img[src="img/office.png"] {
+    width: 6.2em;
+}
+
+.skillsContent img[src="img/php.png"] {
+    width: 6.7em;
+}
+
+.skillsContent img[src="img/cpp.png"] {
+    width: 6em;
+}
 
 
 /* Languages section */
