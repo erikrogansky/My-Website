@@ -937,7 +937,9 @@ body.scroll .arrowDown {
 }
 
 .contactText > label:first-of-type {
+    display: block;
     font-weight: bold;
+    font-size: 1.5em;
 }
 
 .contactText p:first-of-type {
@@ -947,10 +949,6 @@ body.scroll .arrowDown {
 .contactText p:last-of-type {
     font-weight: bold;
     font-size: 1.05em;
-}
-
-.contactText > label:first-of-type {
-    font-size: 1.5em;
 }
 
 .contactTextDetails {

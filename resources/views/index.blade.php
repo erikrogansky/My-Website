@@ -38,7 +38,7 @@
 
     <button onclick="goToTop()" id="goToTopBtn" title="Go to top" class="fa-solid fa-arrow-up"></button>
 
-    <section class="intro">
+    <section class="intro" id="intro">
         <div class="introIcons">
             <a href="https://facebook.com/erik.rogansky" target="_blank" class="fa-brands fa-facebook-f"></a>
             <a href="https://www.linkedin.com/in/erik-rogansk%C3%BD-9b75812a8/" target="_blank" class="fa-brands fa-linkedin-in"></a>

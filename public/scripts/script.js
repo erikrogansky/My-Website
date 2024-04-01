@@ -102,7 +102,7 @@ function createDonutChart(containerId, percentage) {
 
 function animatePercentageText(percentageText, targetPercentage) {
   let currentPercentage = 0;
-  const animationDuration = 600;
+  const animationDuration = 500;
   const animationSteps = 100;
   const stepPercentage = targetPercentage / animationSteps;
 
@@ -146,15 +146,9 @@ window.onload = () => {
   ];
 
   chartData.forEach(data => {
-  
-    // Get the SVG element
     const svg = document.getElementById(data.id);
-  
-    // Create a MutationObserver instance to watch for changes in the class attribute
     const observer = new MutationObserver((mutationsList, observer) => {
-      // Look through all mutations that just occured
       for(let mutation of mutationsList) {
-        // If the class attribute changed and the visible class was added, start the animation
         if (mutation.attributeName === 'class' && svg.classList.contains('visible')) {
           createDonutChart(data.id, data.percentage);
           observer.disconnect();
@@ -162,7 +156,6 @@ window.onload = () => {
       }
     });
   
-    // Start observing the SVG node for configured mutations
     observer.observe(svg, { attributes: true, attributeFilter: ['class'] });
   });
 };
@@ -170,11 +163,10 @@ window.onload = () => {
 
 /* Go to top button */
 function goToTop() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
 
-// Show/hide the "go to top" button based on the scroll position
 window.onscroll = function() {
   scrollFunction();
 };
@@ -184,14 +176,14 @@ function scrollFunction() {
   var footerTop = footer.getBoundingClientRect().top;
   var button = document.getElementById("goToTopBtn");
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    button.style.opacity = "1"; // Set opacity to 1 to make it visible
+    button.style.opacity = "1";
     if (footerTop < window.innerHeight) {
       button.style.bottom = (window.innerHeight - footerTop + 20) + "px";
     } else {
       button.style.bottom = "30px";
     }
   } else {
-    button.style.opacity = "0"; // Set opacity to 0 to hide it
+    button.style.opacity = "0";
   }
 }
 
