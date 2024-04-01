@@ -85,7 +85,45 @@ body {
 }
 
 /* Animation */
+.slide-up {
+    transform: translateY(100px);
+    opacity: 0;
+    visibility: hidden;
+    animation: slide-up-out 0.75s forwards;
+  }
+  
+  .slide-up.visible {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    animation: slide-up-in 0.75s forwards;
+  }
 
+  @keyframes slide-up-in {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes slide-up-out {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        transform: translateY(100px);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
 
 /* Header styles */
 .headerContainer {
@@ -193,12 +231,12 @@ body {
     align-self: center;
     margin-left: 0.7em;
     text-align: center;
+    width: 1.7em;
 }
 
 .introIcons a {
     text-decoration: none;
     color: var(--font-color);
-
     opacity: 0;
     transform: translateX(-150%);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -214,7 +252,7 @@ body {
     flex-direction: column;
     margin-top: 11%;
     margin-left: 12.5%;
-    width: 32em;
+    width: 33em;
     opacity: 0;
     animation: fadeIn 2s forwards;
 }
@@ -245,15 +283,17 @@ body {
     }
   }
 
-.introText label:nth-of-type(2) {
+.introText h1 {
     font-size: 2.66em;
     font-weight: bold;
+    margin: 0;
     margin-top: 5px;
 }
 
-.introText label:nth-of-type(3) {
+.introText h2 {
     font-size: 1.33em;
     font-weight: 600;
+    margin: 0;
 }
 
 .introText p {
@@ -465,15 +505,16 @@ body.scroll .arrowDown {
     padding-bottom: 3.5em;
 }
 
-.services label:first-of-type {
+.services > label {
     font-size: 16px;
     font-weight: bold;
 }
 
-.services label:last-of-type {
+.services > h1 {
     font-size: 40px;
     font-weight: bold;
     padding-bottom: 10px;
+    margin: 0;
 }
 
 .servicesContent {
@@ -545,14 +586,15 @@ body.scroll .arrowDown {
     padding-right: 5em;
 }
 
-.education > label:first-of-type {
+.education > label {
     font-size: 16px;
     font-weight: bold;
 }
 
-.education > label:last-of-type {
+.education > h1 {
     font-size: 40px;
     font-weight: bold;
+    margin: 0;
 }
 
 .educationContent {
@@ -622,15 +664,16 @@ body.scroll .arrowDown {
     padding-bottom: 3.5em;
 }
 
-.skills label:first-of-type {
+.skills > label {
     font-size: 16px;
     font-weight: bold;
 }
 
-.skills label:last-of-type {
+.skills > h1 {
     font-size: 40px;
     font-weight: bold;
     padding-bottom: 0.75em;
+    margin: 0;
 }
 
 .skillsContent {
@@ -691,20 +734,22 @@ body.scroll .arrowDown {
     padding-bottom: 3.5em;
 }
 
-.languages > label:first-of-type {
+.languages > label {
     font-size: 16px;
     font-weight: bold;
 }
 
-.languages > label:nth-of-type(2) {
+.languages > h1 {
     font-size: 40px;
     font-weight: bold;
+    margin: 0;
 }
 
-.languages > label:nth-of-type(3) {
+.languages > h2 {
     font-size: 35px;
     font-weight: bold;
     text-align: center;
+    margin: 0;
     margin-top: 2em;
 }
 
@@ -810,15 +855,16 @@ body.scroll .arrowDown {
     padding-bottom: 2.5em;
 }
 
-.experience > label:first-of-type {
+.experience > label {
     font-size: 16px;
     font-weight: bold;
 }
 
-.experience > label:last-of-type {
+.experience > h1 {
     font-size: 40px;
     font-weight: bold;
     padding-bottom: 0.75em;
+    margin: 0;
 }
 
 .experienceContent {
@@ -867,15 +913,16 @@ body.scroll .arrowDown {
     padding-left: 5em;
 }
 
-.contact > label:first-of-type {
+.contact > label {
     font-size: 16px;
     font-weight: bold;
 }
 
-.contact > label:nth-of-type(2) {
+.contact > h1 {
     font-size: 40px;
     font-weight: bold;
     padding-bottom: 0.5em;
+    margin: 0;
 }
 
 .contactContent {

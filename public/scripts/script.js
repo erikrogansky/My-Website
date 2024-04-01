@@ -146,7 +146,24 @@ window.onload = () => {
   ];
 
   chartData.forEach(data => {
-    createDonutChart(data.id, data.percentage);
+  
+    // Get the SVG element
+    const svg = document.getElementById(data.id);
+  
+    // Create a MutationObserver instance to watch for changes in the class attribute
+    const observer = new MutationObserver((mutationsList, observer) => {
+      // Look through all mutations that just occured
+      for(let mutation of mutationsList) {
+        // If the class attribute changed and the visible class was added, start the animation
+        if (mutation.attributeName === 'class' && svg.classList.contains('visible')) {
+          createDonutChart(data.id, data.percentage);
+          observer.disconnect();
+        }
+      }
+    });
+  
+    // Start observing the SVG node for configured mutations
+    observer.observe(svg, { attributes: true, attributeFilter: ['class'] });
   });
 };
 
@@ -202,9 +219,32 @@ document.addEventListener("DOMContentLoaded", function(event) {
 document.addEventListener("DOMContentLoaded", function() {
   const elements = document.querySelectorAll('.line-by-line');
   elements.forEach((element, index) => {
-    element.style.animationDelay = (index * 0.1) + "s"; // Adjust the delay here
+    element.style.animationDelay = (index * 0.1) + "s";
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  const slideUpElements = Array.from(document.querySelectorAll('.slide-up'));
+
+  window.addEventListener('scroll', () => {
+      let st = window.scrollY;
+
+      slideUpElements.forEach(element => {
+          let rect = element.getBoundingClientRect();
+          
+          if (rect.top >= 0 && rect.bottom <= window.innerHeight + 100) {
+              element.classList.add('visible');
+          }
+
+          else if (rect.top > 0) {
+              element.classList.remove('visible');
+          }
+      });
+  });
+});
+
+
 
 
 /* Arrow down */
@@ -217,7 +257,7 @@ window.addEventListener('scroll', function() {
       body.classList.add('scroll');
   } else {
       body.classList.remove('scroll');
-      arrow.classList.remove('hidden'); // Show arrow when back to top
+      arrow.classList.remove('hidden');
       arrow.classList.add('appear');
   }
 });
