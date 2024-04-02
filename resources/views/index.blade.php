@@ -40,10 +40,10 @@
 
     <section class="intro" id="intro">
         <div class="introIcons">
-            <a href="https://facebook.com/erik.rogansky" target="_blank" class="fa-brands fa-facebook-f"></a>
-            <a href="https://www.linkedin.com/in/erik-rogansk%C3%BD-9b75812a8/" target="_blank" class="fa-brands fa-linkedin-in"></a>
-            <a href="https://instagram.com/erik_rogansky" target="_blank" class="fa-brands fa-instagram"></a>
-            <a href="https://github.com/erikrogansky" target="_blank" class="fa-brands fa-github"></a>
+            <a href="https://facebook.com/erik.rogansky" target="_blank" class="fa-brands fa-facebook-f" data-text="Facebook"></a>
+            <a href="https://www.linkedin.com/in/erik-rogansk%C3%BD-9b75812a8/" target="_blank" class="fa-brands fa-linkedin-in" data-text="LinkedIn"></a>
+            <a href="https://instagram.com/erik_rogansky" target="_blank" class="fa-brands fa-instagram" data-text="Instagram"></a>
+            <a href="https://github.com/erikrogansky" target="_blank" class="fa-brands fa-github" data-text="GitHub"></a>
         </div>
 
         <div class="introText">
