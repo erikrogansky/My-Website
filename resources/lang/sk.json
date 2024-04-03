@@ -1,3 +1,9 @@
 {
-    "Home": "Domov"
+    "Home": "Domov",
+    "Services": "Služby",
+    "Education": "Vzdelanie",
+    "Skills": "Zručnosti",
+    "Languages": "Jazyky",
+    "Experience": "Skúsenosti",
+    "Contact": "Kontakt"
 }
