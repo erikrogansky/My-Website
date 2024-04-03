@@ -1,5 +1,3 @@
-@import url(https://fonts.adobe.com/fonts/cofo-sans-variable#fonts-section);
-
 :root {
     --background-darker: #040825;
     --background-lighter: #270734;
@@ -20,8 +18,6 @@ body {
     font-family: 'CoFo Sans', sans-serif;
     font-size: 18px;
     color: var(--font-color);
-    display: flex;
-    flex-direction: column;
     margin: 0;
     padding: 0;
 }

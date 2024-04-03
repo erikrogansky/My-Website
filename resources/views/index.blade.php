@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/styles.css" rel="stylesheet">
     <link rel="icon" href="img/logo-tr.png">
+    <link rel="preload" href="https://fonts.adobe.com/fonts/cofo-sans-variable" as="font" crossorigin="anonymous">
     <script src="scripts/script.js" defer></script>
     <script src="https://kit.fontawesome.com/ac7b36a7a6.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Erik Roganský</title>
 </head>
 <body>
@@ -36,7 +38,7 @@
         </div>
     </header>
 
-    <button onclick="goToTop()" id="goToTopBtn" title="Go to top" class="fa-solid fa-arrow-up"></button>
+    <button onclick="goToTop()" id="goToTopBtn" class="fa-solid fa-arrow-up"></button>
 
     <section class="intro" id="intro">
         <div class="introIcons">

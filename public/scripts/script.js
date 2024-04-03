@@ -190,19 +190,21 @@ function scrollFunction() {
 /* Animations */
 document.addEventListener("DOMContentLoaded", function(event) {
   var icons = document.querySelectorAll('.introIcons a');
+  setTimeout(function() {
   icons.forEach(function(icon, index) {
     setTimeout(function() {
       icon.classList.add('slide-in');
     }, index * 100);
-  });
+  }); }, 200);
 
   var headers = document.querySelectorAll('.headerCategoriesGrid a');
   var himg = document.getElementById('selectedLanguage');
+  setTimeout(function() {
   headers.forEach(function(header, index) {
     setTimeout(function() {
       header.classList.add('slide-in');
     }, index * 50);
-  });
+  }); }, 200);
 
     himg.classList.add('slide-in');
 
@@ -254,3 +256,13 @@ window.addEventListener('scroll', function() {
   }
 });
 
+
+
+/* Hover on icons */
+$(document).ready(function(){
+  $('.introIcons a').hover(function(){
+      $('.introIcons a').not(this).css('opacity', '0.5');
+  }, function(){
+      $('.introIcons a').css('opacity', '1');
+  });
+});
