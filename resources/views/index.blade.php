@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ $current_locale }}">
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="Erik Roganský, Roganský, Erik">
@@ -19,7 +19,7 @@
             <div></div>
             <div class="headerCategories">
                 <div class="headerCategoriesGrid">
-                    <a href="#intro">Home</a>
+                    <a href="#intro">{{ __('Home') }}</a>
                     <a href="#services">Services</a>
                     <a href="#education">Education</a>
                     <a href="#skills">Skills</a>
