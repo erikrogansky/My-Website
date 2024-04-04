@@ -49,19 +49,19 @@
         </div>
 
         <div class="introText">
-            <label class="colorful line-by-line">Hello, I am</label>
+            <label class="colorful line-by-line">{{ __('Hello, I am') }}</label>
             <h1 class="line-by-line">Erik Roganský</h1>
             <hr class="line-by-line">
-            <h2 class="line-by-line">Informatics Student / Freelance Translator</h2>
-            <p class="line-by-line">I am an informatics student with a strong interest in <strong>web development</strong>, <strong>Java</strong>, and <strong>C++</strong>. Professionally, I am currently mostly involved in <strong>English-Slovak translation</strong> work.</p>
+            <h2 class="line-by-line">{{ __('Informatics Student / Freelance Translator') }}</h2>
+            <p class="line-by-line">{{ __('I am an informatics student with a strong interest in <strong>web development</strong>, <strong>Java</strong>, and <strong>C++</strong>. Professionally, I am currently mostly involved in <strong>English-Slovak translation</strong> work.') }}</p>
             <ul>
-                <li class="line-by-line">Every single detail matters</li>
-                <li class="line-by-line">Self-growth and improvement is crucial</li>
-                <li class="line-by-line">Lorem ipsum dolor sit amet</li>
+                <li class="line-by-line">{{ __('Every single detail matters') }}</li>
+                <li class="line-by-line">{{ __('Self-growth and improvement is crucial') }}</li>
+                <li class="line-by-line">{{ __('Lorem ipsum dolor sit amet') }}</li>
             </ul>
             <div class="introButtons line-by-line">
-                <a href="cv/cv.pdf" download="cv" class="colorfulButton">Download CV</a>
-                <button class="colorfulBorderButton"><span>Contact me</span></button>
+                <a href="cv/cv.pdf" download="cv" class="colorfulButton">{{ __('Download CV') }}</a>
+                <button class="colorfulBorderButton"><span>{{ __('Contact me') }}</span></button>
             </div>
         </div>
 
@@ -77,49 +77,49 @@
     </section>
 
     <section class="services" id="services">
-        <label class="colorful slide-up">Services</label>
-        <h1 class="slide-up">What I am offering</h1>
+        <label class="colorful slide-up">{{ __('Services') }}</label>
+        <h1 class="slide-up">{{ __('What I am offering') }}</h1>
         <div class="servicesContent">
             <div class="servicesItem">
                 <img src="/img/translate.png" alt="Translation service" class="slide-up">
-                <label class="slide-up">Translation services</label>
-                <label class="slide-up">I offer precise translations from English to Slovak for documents, websites, applications, and a wide array of content with meticulous attention to accuracy and quality.</label>
+                <label class="slide-up">{{ __('Translation services') }}</label>
+                <label class="slide-up">{{ __('I offer precise translations from English to Slovak for documents, websites, applications, and a wide array of content with meticulous attention to accuracy and quality.') }}</label>
             </div>
             <div class="servicesItem">
                 <i class="fa-solid fa-code slide-up"></i>
-                <label class="slide-up">Web development</label>
-                <label class="slide-up">With expertise in frontend and backend development, I create websites that are visually appealing and functional, focusing on user experience to leave a positive impression.</label>
+                <label class="slide-up">{{ __('Web development') }}</label>
+                <label class="slide-up">{{ __('With expertise in frontend and backend development, I create websites that are visually appealing and functional, focusing on user experience to leave a positive impression.') }}</label>
             </div>
             <div class="servicesItem">
                 <img src="/img/cpp_java.png" alt="Translation service" class="slide-up">
-                <label class="slide-up">Software development</label>
-                <label class="slide-up">I provide comprehensive software development services in Java and C++, ensuring tailored solutions for applications and systems to meet specific needs and standards.</label>
+                <label class="slide-up">{{ __('Software development') }}</label>
+                <label class="slide-up">{{ __('I provide comprehensive software development services in Java and C++, ensuring tailored solutions for applications and systems to meet specific needs and standards.') }}</label>
             </div>
         </div>
         <div class="servicesContentAdd">
             <div class="servicesItem">
                 <i class="fa-solid fa-question slide-up"></i>
-                <label class="slide-up">Didn't find what you need?</label>
-                <label class="slide-up">If the service you’re looking for is not listed, contact me! If I have the necessary skills, I am sure we can find a solution.</label>
+                <label class="slide-up">{{ __('Didn’t find what you need?') }}</label>
+                <label class="slide-up">{{ __('If the service you’re looking for is not listed, contact me! If I have the necessary skills, I am sure we can find a solution.') }}</label>
             </div>
         </div>
     </section>
 
     
     <section class="education" id="education">
-        <label class="colorful slide-up">Education</label>
-        <h1 class="slide-up">My studies</h1>
+        <label class="colorful slide-up">{{ __('Education') }}</label>
+        <h1 class="slide-up">{{ __('My studies') }}</h1>
         <div class="educationContent">
             <div class="educationItem slide-up">
-                <label>Faculty of Informatics and Information Technologies<br>Slovak University of Technology in Bratislava</label>
-                <label>Bachelor of Informatics</label>
-                <label>2022 - present</label>
+                <label>{{ __('Faculty of Informatics and Information Technologies<br>Slovak University of Technology in Bratislava') }}</label>
+                <label>{{ __('Bachelor of Informatics') }}</label>
+                <label>{{ __('2022 - present') }}</label>
                 <a href="https://www.fiit.stuba.sk/" target="_blank" class="fa-solid fa-link"></a>
             </div>
             <hr class="slide-up">
             <div class="educationItem slide-up">
                 <label>Gymnázium Ľudovíta Štúra Zvolen</label>
-                <label>High school diploma</label>
+                <label>{{ __('High school diploma') }}</label>
                 <label>2018 - 2022</label>
                 <a href="https://gymzv.sk" target="_blank" class="fa-solid fa-link"></a>
             </div>
@@ -127,8 +127,8 @@
     </section>
 
     <section class="skills" id="skills">
-        <label class="colorful slide-up">Skills</label>
-        <h1  class="slide-up">What I am skilled at</h1>
+        <label class="colorful slide-up">{{ __('Skills') }}</label>
+        <h1  class="slide-up">{{ __('What I am skilled at') }}</h1>
         <div class="skillsContent">
             <img src="/img/html.png" alt="HTML" class="slide-up">
             <img src="/img/css.png" alt="CSS" class="slide-up">
@@ -146,89 +146,89 @@
     </section>
 
     <section class="languages" id="languages">
-        <label class="colorful slide-up">Languages</label>
-        <h1 class="slide-up">Languages I speak</h1>
+        <label class="colorful slide-up">{{ __('Languages') }}</label>
+        <h1 class="slide-up">{{ __('Languages I speak') }}</h1>
         <div class="languagesContent">
             <div class="languageItem">
                 <div class="chart-container slide-up" id="chart1"></div>
-                <label class="slide-up">English</label>
-                <label class="slide-up">Professional working proficiency</label>
+                <label class="slide-up">{{ __('English') }}</label>
+                <label class="slide-up">{{ __('Professional working proficiency') }}</label>
             </div>
             <div class="languageItem">
                 <div class="chart-container slide-up" id="chart2"></div>
-                <label class="slide-up">Slovak</label>
-                <label class="slide-up">Native proficiency</label>
+                <label class="slide-up">{{ __('Slovak') }}</label>
+                <label class="slide-up">{{ __('Native proficiency') }}</label>
             </div>
             <div class="languageItem">
                 <div class="chart-container slide-up" id="chart3"></div>
-                <label class="slide-up">Czech</label>
-                <label class="slide-up">Full professional proficiency</label>
+                <label class="slide-up">{{ __('Czech') }}</label>
+                <label class="slide-up">{{ __('Full professional proficiency') }}</label>
             </div>
         </div>
-        <h2 class="slide-up">Additional languages</h2>
+        <h2 class="slide-up">{{ __('Additional languages') }}</h2>
         <div class="languagesContentAdd"">
             <div class="languageItem">
                 <div class="chart-container slide-up" id="chart4"></div>
-                <label class="slide-up">French</label>
-                <label class="slide-up">Limited working profficiency </label>
+                <label class="slide-up">{{ __('French') }}</label>
+                <label class="slide-up">{{ __('Limited working profficiency') }}</label>
             </div>
             <div class="languageItem">
                 <div class="chart-container slide-up" id="chart5"></div>
-                <label class="slide-up">Spanish</label>
-                <label class="slide-up">Elementary proficiency</label>
-                <label class="slide-up">(currently learning)</label>
+                <label class="slide-up">{{ __('Spanish') }}</label>
+                <label class="slide-up">{{ __('Elementary proficiency') }}</label>
+                <label class="slide-up">{{ __('(currently learning)') }}</label>
             </div>
         </div>
     </section>
 
     <section class="experience" id="experience">
-        <label class="colorful slide-up">Experience</label>
-        <h1 class="slide-up">My journey so far...</h1>
+        <label class="colorful slide-up">{{ __('Experience') }}</label>
+        <h1 class="slide-up">{{ __('My journey so far...') }}</h1>
         <div class="experienceContent">
             <div class="experienceItem">
-                <label class="slide-up">Translator (English to Slovak)</label>
-                <label class="slide-up">Self-employed</label>
-                <label class="slide-up">2023 - present</label>
+                <label class="slide-up">{{ __('Translator (English to Slovak)') }}</label>
+                <label class="slide-up">{{ __('Self-employed') }}</label>
+                <label class="slide-up">{{ __('2023 - present') }}</label>
                 <ul>
-                    <li class="slide-up">Skilled in translating predominantly IT products with additional experience across diverse fields</li>
-                    <li class="slide-up">Collaborating with a team of translators to complete large projects efficiently and within deadlines</li>
-                    <li class="slide-up">Using various online tools (CAT) and dictionaries to research and verify technical terms and expressions</li>
-                    <li class="slide-up">Editing and proofreading translations to ensure clarity, accuracy, and coherence</li>
+                    <li class="slide-up">{{ __('Skilled in translating predominantly IT products with additional experience across diverse fields') }}</li>
+                    <li class="slide-up">{{ __('Collaborating with a team of translators to complete large projects efficiently and within deadlines') }}</li>
+                    <li class="slide-up">{{ __('Using various online tools (CAT) and dictionaries to research and verify technical terms and expressions') }}</li>
+                    <li class="slide-up">{{ __('Editing and proofreading translations to ensure clarity, accuracy, and coherence') }}</li>
                 </ul>
             </div>
 
             <div class="experienceItem">
-                <label class="slide-up">Artificial intelligence prompt analyst</label>
-                <label class="slide-up">Self-employed</label>
-                <label class="slide-up">2023 - present</label>
+                <label class="slide-up">{{ __('Artificial intelligence prompt analyst') }}</label>
+                <label class="slide-up">{{ __('Self-employed') }}</label>
+                <label class="slide-up">{{ __('2023 - present') }}</label>
                 <ul>
-                    <li class="slide-up">Extensive experience in text analysis and comparative assessment</li>
-                    <li class="slide-up">Comparing and evaluating the outputs of different prompts for various generative AI tasks, such as text summarization, sentiment analysis, and content creation</li>
-                    <li class="slide-up">Identifying and reporting the strengths and weaknesses of different prompts, as well as the potential ethical, cultural, and social implications of the generated outputs</li>
+                    <li class="slide-up">{{ __('Extensive experience in text analysis and comparative assessment') }}</li>
+                    <li class="slide-up">{{ __('Comparing and evaluating the outputs of different prompts for various generative AI tasks, such as text summarization, sentiment analysis, and content creation') }}</li>
+                    <li class="slide-up">{{ __('Identifying and reporting the strengths and weaknesses of different prompts, as well as the potential ethical, cultural, and social implications of the generated outputs') }}</li>
                 </ul>
             </div>
         </div>
     </section>
 
     <section class="contact" id="contact">
-        <label class="colorful slide-up">Contact</label>
-        <h1 class="slide-up">Contact me</h1>
+        <label class="colorful slide-up">{{ __('Contact') }}</label>
+        <h1 class="slide-up">{{ __('Contact me') }}</h1>
         <div class="contactContent">
             <div class="contactText">
-                <p class="slide-up">If you wish to contact me, below you'll find multiple ways to get in touch with me.</p>
-                <label class="slide-up">Contact Details:</label>
+                <p class="slide-up">{{ __('If you wish to contact me, below you’ll find multiple ways to get in touch with me.') }}</p>
+                <label class="slide-up">{{ __('Contact Details:') }}</label>
                 <div class="contactTextDetails">
                     <div class="contactDetailsElement slide-up"><i class="fa-solid fa-at"></i><label><strong>Email: </strong>roganskyerik@gmail.com</label></div>
-                    <div class="contactDetailsElement slide-up"><i class="fa-solid fa-phone"></i><label><strong>Phone: </strong>+421 903 022 263</label></div>
-                    <div class="contactDetailsElement slide-up"><i class="fa-solid fa-location-dot"></i><label><strong>Address: </strong>I. Krasku 43, 963 01 Krupina, Slovak republic</label></div>
+                    <div class="contactDetailsElement slide-up"><i class="fa-solid fa-phone"></i><label>{{ __('<strong>Phone: </strong>+421 903 022 263') }}</label></div>
+                    <div class="contactDetailsElement slide-up"><i class="fa-solid fa-location-dot"></i><label>{{ __('<strong>Address: </strong>I. Krasku 43, 963 01 Krupina, Slovak republic') }}</label></div>
                 </div>
-                <p class="slide-up">Feel free to drop me an email or give me a call if you have any questions, inquiries, or would like to discuss potential collaborations.</p>
-                <p class="slide-up">Alternatively, you can use the form on the right to send me a message directly through the website. Simply fill in your details.</p>
-                <p class="slide-up">If you have any technical problems with or questions regarding the website, please don't hesitate to contact me using the email below:</p>
+                <p class="slide-up">{{ __('Feel free to drop me an email or give me a call if you have any questions, inquiries, or would like to discuss potential collaborations.') }}</p>
+                <p class="slide-up">{{ __('Alternatively, you can use the form on the right to send me a message directly through the website. Simply fill in your details.') }}</p>
+                <p class="slide-up">{{ __('If you have any technical problems with or questions regarding the website, please don’t hesitate to contact me using the email below:') }}</p>
                 <div class="contactTextTech">
-                    <div class="contactDetailsElement slide-up"><i class="fa-solid fa-wrench"></i><label><strong>Tech support: </strong>admin@roganskyerik.com</label></div>
+                    <div class="contactDetailsElement slide-up"><i class="fa-solid fa-wrench"></i><label>{{ __('<strong>Tech support: </strong>admin@roganskyerik.com') }}</label></div>
                 </div>
-                <p class="slide-up">Looking forward to hearing from you!</p>
+                <p class="slide-up">{{ __('Looking forward to hearing from you!') }}</p>
             </div>
 
             <div class="contactForm">
@@ -238,7 +238,7 @@
                     <input type="text" placeholder="Phone number (optional)" class="basicInput slide-up">
                     <input type="text" placeholder="Subject" class="basicInput slide-up" required>
                     <textarea placeholder="Message" class="basicInput slide-up" required></textarea>
-                    <button class="colorfulButton slide-up">Send message</button>
+                    <button class="colorfulButton slide-up">{{ __('Send message') }}</button>
                 </form>
             </div>
         </div>
@@ -247,8 +247,8 @@
     <footer>
         <div class="footerContainer">
             <div class="copyright">
-                <label>Made with ❤️ by Erik Roganský</label>
-                <label>© Erik Roganský 2024. All rights reserved.</label>
+                <label>{{ __('Made with ❤️ by Erik Roganský') }}</label>
+                <label>{{ __('© Erik Roganský 2024. All rights reserved.') }}</label>
                 <div class="footerIcons">
                     <a href="https://facebook.com/erik.rogansky" target="_blank" class="fa-brands fa-facebook-f"></a>
                     <a href="https://www.linkedin.com/in/erik-rogansk%C3%BD-9b75812a8/" target="_blank" class="fa-brands fa-linkedin-in"></a>
@@ -257,8 +257,8 @@
                 </div>
             </div>
             <div class="terms">
-                <a href="#">Terms and Conditions</a>
-                <a href="#">Privacy Policy</a>
+                <a href="#">{{ __('Terms and Conditions') }}</a>
+                <a href="#">{{ __('Privacy Policy') }}</a>
             </div>
         </div>
     </footer>
