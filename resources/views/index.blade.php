@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    @vite(['resources/css/styles.css', 'resources/scripts/script.js'])
     <meta charset="UTF-8">
     <meta name="keywords" content="Erik Roganský, Roganský, Erik">
     <meta name="description" content="Coming soon!">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/styles.css" rel="stylesheet">
-    <link rel="icon" href="img/logo-tr.png">
+    <link href="/css/styles.css" rel="stylesheet">
+    <link rel="icon" href="/img/logo-tr.png">
     <link rel="preload" href="https://fonts.adobe.com/fonts/cofo-sans-variable" as="font" crossorigin="anonymous">
-    <script src="scripts/script.js" defer></script>
+    <script src="/scripts/script.js" defer></script>
     <script src="https://kit.fontawesome.com/ac7b36a7a6.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Erik Roganský</title>
@@ -29,10 +30,10 @@
                 </div>
             </div>
             <div class="headerLanguage">
-                <img id="selectedLanguage" src="img/us.png" alt="ENG">
+                <img id="selectedLanguage" src="/img/us.png" alt="ENG">
                 <div class="dropdownContent">
-                    <img src="img/sk.png" alt="SVK" onclick="changeLanguage('SVK')">
-                    <img src="img/us.png" alt="ENG" onclick="changeLanguage('ENG')" style="display: none;">
+                    <img src="/img/sk.png" alt="SVK" onclick="location.href = '{{ route('langSwitch', 'sk') }}';">
+                    <img src="/img/us.png" alt="ENG" onclick="changeLanguage('ENG')" style="display: none;">
                 </div>
             </div>
         </div>
@@ -67,7 +68,7 @@
 
         <div class="introPhoto">
             <div class="photoContainer">
-                <img src="img/no-bcg-big.png" alt="Me">
+                <img src="/img/no-bcg-big.png" alt="Me">
             </div>
         </div>
 
@@ -81,7 +82,7 @@
         <h1 class="slide-up">What I am offering</h1>
         <div class="servicesContent">
             <div class="servicesItem">
-                <img src="img/translate.png" alt="Translation service" class="slide-up">
+                <img src="/img/translate.png" alt="Translation service" class="slide-up">
                 <label class="slide-up">Translation services</label>
                 <label class="slide-up">I offer precise translations from English to Slovak for documents, websites, applications, and a wide array of content with meticulous attention to accuracy and quality.</label>
             </div>
@@ -91,7 +92,7 @@
                 <label class="slide-up">With expertise in frontend and backend development, I create websites that are visually appealing and functional, focusing on user experience to leave a positive impression.</label>
             </div>
             <div class="servicesItem">
-                <img src="img/cpp_java.png" alt="Translation service" class="slide-up">
+                <img src="/img/cpp_java.png" alt="Translation service" class="slide-up">
                 <label class="slide-up">Software development</label>
                 <label class="slide-up">I provide comprehensive software development services in Java and C++, ensuring tailored solutions for applications and systems to meet specific needs and standards.</label>
             </div>
@@ -130,18 +131,18 @@
         <label class="colorful slide-up">Skills</label>
         <h1  class="slide-up">What I am skilled at</h1>
         <div class="skillsContent">
-            <img src="img/html.png" alt="HTML" class="slide-up">
-            <img src="img/css.png" alt="CSS" class="slide-up">
-            <img src="img/js.png" alt="JS" class="slide-up">
-            <img src="img/php.png" alt="PHP" class="slide-up">
-            <img src="img/figma.png" alt="Figma" class="slide-up">
-            <img src="img/laravel.png" alt="Laravel" class="slide-up">
-            <img src="img/cpp.png" alt="C++" class="slide-up">
-            <img src="img/java.png" alt="Java" class="slide-up">
-            <img src="img/postgre.png" alt="PostgreSQL" class="slide-up">
-            <img src="img/linux.png" alt="Linux" class="slide-up">
-            <img src="img/phrase.png" alt="Phrase" class="slide-up">
-            <img src="img/office.png" alt="Office" class="slide-up">
+            <img src="/img/html.png" alt="HTML" class="slide-up">
+            <img src="/img/css.png" alt="CSS" class="slide-up">
+            <img src="/img/js.png" alt="JS" class="slide-up">
+            <img src="/img/php.png" alt="PHP" class="slide-up">
+            <img src="/img/figma.png" alt="Figma" class="slide-up">
+            <img src="/img/laravel.png" alt="Laravel" class="slide-up">
+            <img src="/img/cpp.png" alt="C++" class="slide-up">
+            <img src="/img/java.png" alt="Java" class="slide-up">
+            <img src="/img/postgre.png" alt="PostgreSQL" class="slide-up">
+            <img src="/img/linux.png" alt="Linux" class="slide-up">
+            <img src="/img/phrase.png" alt="Phrase" class="slide-up">
+            <img src="/img/office.png" alt="Office" class="slide-up">
         </div>
     </section>
 

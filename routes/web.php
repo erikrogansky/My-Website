@@ -6,14 +6,9 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/{locale?}', function ($locale = null) {
-    if (isset($locale) && in_array($locale, config('app.available_locales'))) {
-        app()->setLocale($locale);
-    } 
+Route::get('/lang/{locale}', function ($locale) {
+    app()->setLocale($locale);
+    session()->put('locale', $locale);
     
-    if ($locale !== 'sk') {
-        return redirect('/');
-    }
-    
-    return view('index');
-});
+    return redirect()->back();
+})->name('langSwitch');

@@ -23,18 +23,6 @@ document.querySelector('.headerLanguage').addEventListener('mouseleave', functio
     }, 300);
 });
 
-function changeLanguage(language) {
-  if (language === 'ENG') {
-    document.getElementById('selectedLanguage').src = 'img/us.png';
-    document.querySelector('.dropdownContent img:nth-child(2)').style.display = 'none';
-    document.querySelector('.dropdownContent img:first-child').style.display = 'block';
-  } else {
-    document.getElementById('selectedLanguage').src = 'img/sk.png';
-    document.querySelector('.dropdownContent img:first-child').style.display = 'none';
-    document.querySelector('.dropdownContent img:nth-child(2)').style.display = 'block';
-  }
-}
-
 const textarea = document.querySelector('.contactForm textarea');
 textarea.addEventListener('input', () => {
     textarea.style.height = 'auto';
