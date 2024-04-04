@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    @vite(['resources/css/styles.css', 'resources/scripts/script.js'])
     <meta charset="UTF-8">
     <meta name="keywords" content="Erik Roganský, Roganský, Erik">
     <meta name="description" content="Coming soon!">
