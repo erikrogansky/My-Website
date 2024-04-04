@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="Erik Roganský, Roganský, Erik">
-    <meta name="description" content="Coming soon!">
+    <meta name="description" content="Aspiring informatics student with a passion for learning and growth, skilled in web and software development. Let's connect for opportunities and collaborations.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name='author' content='Erik Roganský, roganskyerik@gmail.com'>
     <link href="/css/styles.css" rel="stylesheet">
     <link rel="icon" href="/img/logo-tr.png">
     <link rel="preload" href="https://fonts.adobe.com/fonts/cofo-sans-variable" as="font" crossorigin="anonymous">
@@ -53,7 +55,7 @@
             <h1 class="line-by-line">Erik Roganský</h1>
             <hr class="line-by-line">
             <h2 class="line-by-line">{{ __('Informatics Student / Freelance Translator') }}</h2>
-            <p class="line-by-line">{{ __('I am an informatics student with a strong interest in <strong>web development</strong>, <strong>Java</strong>, and <strong>C++</strong>. Professionally, I am currently mostly involved in <strong>English-Slovak translation</strong> work.') }}</p>
+            <p class="line-by-line">{{ __('I am an informatics student with a strong interest in ') }}<strong>{{ __('web development') }}</strong>, <strong>Java</strong>, {{ __('and') }} <strong>C++</strong>. {{ __('Professionally, I am currently mostly involved in') }} <strong>{{ __('English-Slovak translation') }}</strong>{{ __(' work.') }}</p>
             <ul>
                 <li class="line-by-line">{{ __('Every single detail matters') }}</li>
                 <li class="line-by-line">{{ __('Self-growth and improvement is crucial') }}</li>
@@ -83,7 +85,7 @@
             <div class="servicesItem">
                 <img src="/img/translate.png" alt="Translation service" class="slide-up">
                 <label class="slide-up">{{ __('Translation services') }}</label>
-                <label class="slide-up">{{ __('I offer precise translations from English to Slovak for documents, websites, applications, and a wide array of content with meticulous attention to accuracy and quality.') }}</label>
+                <label class="slide-up">{{ __('I offer precise translations between English and Slovak for documents, websites, applications, and a wide array of content with meticulous attention to accuracy and quality.') }}</label>
             </div>
             <div class="servicesItem">
                 <i class="fa-solid fa-code slide-up"></i>
@@ -111,7 +113,7 @@
         <h1 class="slide-up">{{ __('My studies') }}</h1>
         <div class="educationContent">
             <div class="educationItem slide-up">
-                <label>{{ __('Faculty of Informatics and Information Technologies<br>Slovak University of Technology in Bratislava') }}</label>
+                <label>{{ __('Faculty of Informatics and Information Technologies') }}<br>{{ __('Slovak University of Technology in Bratislava') }}</label>
                 <label>{{ __('Bachelor of Informatics') }}</label>
                 <label>{{ __('2022 - present') }}</label>
                 <a href="https://www.fiit.stuba.sk/" target="_blank" class="fa-solid fa-link"></a>
@@ -219,14 +221,14 @@
                 <label class="slide-up">{{ __('Contact Details:') }}</label>
                 <div class="contactTextDetails">
                     <div class="contactDetailsElement slide-up"><i class="fa-solid fa-at"></i><label><strong>Email: </strong>roganskyerik@gmail.com</label></div>
-                    <div class="contactDetailsElement slide-up"><i class="fa-solid fa-phone"></i><label>{{ __('<strong>Phone: </strong>+421 903 022 263') }}</label></div>
-                    <div class="contactDetailsElement slide-up"><i class="fa-solid fa-location-dot"></i><label>{{ __('<strong>Address: </strong>I. Krasku 43, 963 01 Krupina, Slovak republic') }}</label></div>
+                    <div class="contactDetailsElement slide-up"><i class="fa-solid fa-phone"></i><label><strong>{{ __('Phone') }}: </strong>+421 903 022 263</label></div>
+                    <div class="contactDetailsElement slide-up"><i class="fa-solid fa-location-dot"></i><label><strong>{{ __('Address') }}: </strong>I. Krasku 43, 963 01 Krupina, {{ __('Slovak republic') }}</label></div>
                 </div>
                 <p class="slide-up">{{ __('Feel free to drop me an email or give me a call if you have any questions, inquiries, or would like to discuss potential collaborations.') }}</p>
                 <p class="slide-up">{{ __('Alternatively, you can use the form on the right to send me a message directly through the website. Simply fill in your details.') }}</p>
                 <p class="slide-up">{{ __('If you have any technical problems with or questions regarding the website, please don’t hesitate to contact me using the email below:') }}</p>
                 <div class="contactTextTech">
-                    <div class="contactDetailsElement slide-up"><i class="fa-solid fa-wrench"></i><label>{{ __('<strong>Tech support: </strong>admin@roganskyerik.com') }}</label></div>
+                    <div class="contactDetailsElement slide-up"><i class="fa-solid fa-wrench"></i><label><strong>{{ __('Tech support:') }} </strong>admin@roganskyerik.com</label></div>
                 </div>
                 <p class="slide-up">{{ __('Looking forward to hearing from you!') }}</p>
             </div>
