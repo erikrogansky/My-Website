@@ -1220,9 +1220,13 @@ body.scroll .arrowDown {
     margin: 0;
 }
 
-.termsSection p {
+.termsSection p, .termsSection li {
     font-size: 0.975rem;
-    margin: 0.25rem 0;
+    margin: 0.75rem 0;
+}
+
+.termsSection li {
+    margin: 0.5rem 0;
 }
 
 .termsSection h2, .termsSection h3 {
