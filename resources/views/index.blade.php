@@ -234,12 +234,13 @@
             </div>
 
             <div class="contactForm">
-                <form>
-                    <input type="text" placeholder="Name" class="basicInput slide-up" required>
-                    <input type="text" placeholder="Email" class="basicInput slide-up" required>
-                    <input type="text" placeholder="Phone number (optional)" class="basicInput slide-up">
-                    <input type="text" placeholder="Subject" class="basicInput slide-up" required>
-                    <textarea placeholder="Message" class="basicInput slide-up" required></textarea>
+                <form action="{{ route('send_mail') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+                    <input type="text" placeholder="Name" class="basicInput slide-up" name="name" required>
+                    <input type="text" placeholder="Email" class="basicInput slide-up" name="email" required>
+                    <input type="text" placeholder="Phone number (optional)" class="basicInput slide-up" name="phone">
+                    <input type="text" placeholder="Subject" class="basicInput slide-up" name="subject" required>
+                    <textarea placeholder="Message" class="basicInput slide-up" name="message" required></textarea>
                     <button class="colorfulButton slide-up">{{ __('Send message') }}</button>
                 </form>
             </div>
