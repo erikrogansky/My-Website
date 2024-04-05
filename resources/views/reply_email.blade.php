@@ -1,12 +1,12 @@
 @component('mail::message')
 # Hi {{ $name }},
 
-{{ $senderMessage }}
+Thank you for contacting me!
 
-I have received your email and will try to respond quickly.
+This is to inform you, that I have received your message and will try to respond as soon as possible.
 
 @component('mail::button', ['url' => $mailData['url']])
-Visit Our Website
+Visit My Website
 @endcomponent
 
 Thanks,

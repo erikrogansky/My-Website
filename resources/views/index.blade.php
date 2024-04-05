@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
     <meta name='author' content='Erik Roganský, roganskyerik@gmail.com'>
+    <meta name="google-site-verification" content="-fH-o9fmZnq5NLOP63n2X1sTgt3zMJxmoqezZzFcGKU" />
     <link href="/css/styles.css" rel="stylesheet">
     <link rel="icon" href="/img/logo-tr.png">
     <link rel="preload" href="https://fonts.adobe.com/fonts/cofo-sans-variable" as="font" crossorigin="anonymous">
@@ -39,6 +40,43 @@
             </div>
         </div>
     </header>
+
+
+    @if (session('successTitle') && session('successMessage'))
+    <div id="overlay" class="overlay"></div>
+    <div id="successPopup" class="successPopup">
+        <h2>{{ session('successMessage') }}</h2>
+        <p>This popup will close in <span id="countdown">5</span> seconds.</p>
+    </div>
+    <script>
+    var countdownElement = document.getElementById('countdown');
+    var countdown = 5;
+
+    var countdownInterval = setInterval(function() {
+        countdown--;
+        countdownElement.textContent = countdown;
+        if (countdown <= 0) {
+            clearInterval(countdownInterval);
+            fadeOut('successPopup');
+            fadeOut('overlay');
+        }
+    }, 1000);
+
+    function fadeOut(elementId) {
+        var element = document.getElementById(elementId);
+        var opacity = 1;
+        var interval = setInterval(function() {
+            if (opacity <= 0) {
+                clearInterval(interval);
+                element.style.display = 'none';
+            } else {
+                element.style.opacity = opacity;
+                opacity -= 0.01;
+            }
+        }, 1);
+    }
+    </script>
+    @endif
 
     <button onclick="goToTop()" id="goToTopBtn" class="fa-solid fa-arrow-up"></button>
 
@@ -234,14 +272,14 @@
             </div>
 
             <div class="contactForm">
-                <form action="{{ route('send_mail') }}" method="POST" enctype="multipart/form-data">
+                <form id="contactForm" action="{{ route('send_mail') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                     <input type="text" placeholder="Name" class="basicInput slide-up" name="name" required>
                     <input type="text" placeholder="Email" class="basicInput slide-up" name="email" required>
                     <input type="text" placeholder="Phone number (optional)" class="basicInput slide-up" name="phone">
                     <input type="text" placeholder="Subject" class="basicInput slide-up" name="subject" required>
                     <textarea placeholder="Message" class="basicInput slide-up" name="message" required></textarea>
-                    <button class="colorfulButton slide-up">{{ __('Send message') }}</button>
+                    <button id="submitButton" class="colorfulButton slide-up">{{ __('Send message') }}</button>
                 </form>
             </div>
         </div>

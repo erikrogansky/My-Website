@@ -22,12 +22,17 @@ class MailController extends Controller {
         $subject = $request->subject;
         $message = $request->message;
         $mailData = [
-            'url' => 'https://sandroft.com/',
+            'url' => 'https://roganskyerik.com/',
         ];
-        $send_mail = "roganskyerik@gmail.com";
+        $send_mail = "info@roganskyerik.com";
         Mail::to($send_mail)->send(new SendMail($name, $email, $phone, $subject, $message));
-        $senderMessage = "thanks for your message , we will reply you in later";
-        Mail::to($email)->send(new SendMessageToEndUser($name,$senderMessage,$mailData));
-        return "Mail Send Successfully";
+
+        Mail::to($email)->send(new SendMessageToEndUser($name,$mailData));
+
+        $successMessage = "Your message has been sent sucessfully!";
+
+        $request->session()->flash('successMessage', $successMessage);
+
+        return redirect('/');
     }
 }

@@ -1168,3 +1168,67 @@ body.scroll .arrowDown {
     text-align: right;
     margin-left: auto;
 }
+
+
+
+/* The success popup */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+}
+
+.successPopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(150deg, var(--accent-first), var(--accent-second));
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 9999;
+}
+
+.successPopup h2 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.successPopup p {
+    font-size: 1em;
+    margin: 1em 0 0 0;
+}
+
+
+.termsSection {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 4rem;
+}
+
+.termsSection a {
+    color: white;
+}
+
+.termsSection * {
+    margin: 0;
+}
+
+.termsSection p {
+    font-size: 0.975rem;
+    margin: 0.25rem 0;
+}
+
+.termsSection h2, .termsSection h3 {
+    margin: 0.5rem 0;
+}
+
+.termsSection h1 {
+    margin: 0.75rem 0;
+}

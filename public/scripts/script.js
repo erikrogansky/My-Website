@@ -195,7 +195,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }); }, 200);
 
     himg.classList.add('slide-in');
-
 });
 
 document.addEventListener("DOMContentLoaded", function() {

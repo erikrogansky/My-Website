@@ -10,6 +10,7 @@
     <meta name="robots" content="index, follow">
     <meta name='author' content='Erik Roganský, roganskyerik@gmail.com'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="-fH-o9fmZnq5NLOP63n2X1sTgt3zMJxmoqezZzFcGKU" />
     <title>Under Maintenance</title>
     <style>
         :root {

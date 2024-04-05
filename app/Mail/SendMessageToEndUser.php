@@ -20,10 +20,9 @@ class SendMessageToEndUser extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct($name, $senderMessage,$mailData)
+    public function __construct($name,$mailData)
     {
         $this->name = $name;
-        $this->senderMessage = $senderMessage;
         $this->mailData = $mailData;
     }
 
@@ -33,7 +32,7 @@ class SendMessageToEndUser extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Send Message To End User',
+            subject: 'Your message has been sent!',
         );
     }
 

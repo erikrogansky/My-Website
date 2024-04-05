@@ -7,6 +7,14 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('privacy', function () {
+    return view('privacy');
+});
+
+Route::get('terms', function () {
+    return view('terms');
+});
+
 Route::get('/lang/{locale}', function ($locale) {
     app()->setLocale($locale);
     session()->put('locale', $locale);
