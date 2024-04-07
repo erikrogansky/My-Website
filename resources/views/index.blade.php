@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="Erik Roganský, Roganský, Erik">
-    <meta name="description" content="Aspiring informatics student with a passion for learning and growth, skilled in web and software development. Let's connect for opportunities and collaborations.">
+    <meta name="description" content="Informatics student with a passion for learning and growth, skilled in web and software development as well as translation work.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
     <meta name='author' content='Erik Roganský, roganskyerik@gmail.com'>
@@ -15,6 +15,14 @@
     <script src="https://kit.fontawesome.com/ac7b36a7a6.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Erik Roganský</title>
+    <script type="application/ld+json">
+    {
+      "@context" : "https://schema.org",
+      "@type" : "WebSite",
+      "name" : "Erik Roganský | Official Website",
+      "url" : "https://roganskyerik.com/",
+    }
+  </script>
 </head>
 <body>
     <header>
@@ -83,7 +91,7 @@
     <section class="intro" id="intro">
         <div class="introIcons">
             <a href="https://facebook.com/erik.rogansky" target="_blank" class="fa-brands fa-facebook-f" data-text="Facebook"></a>
-            <a href="https://www.linkedin.com/in/erik-rogansk%C3%BD-9b75812a8/" target="_blank" class="fa-brands fa-linkedin-in" data-text="LinkedIn"></a>
+            <a href="https://www.linkedin.com/in/erikrogansky/" target="_blank" class="fa-brands fa-linkedin-in" data-text="LinkedIn"></a>
             <a href="https://instagram.com/erik_rogansky" target="_blank" class="fa-brands fa-instagram" data-text="Instagram"></a>
             <a href="https://github.com/erikrogansky" target="_blank" class="fa-brands fa-github" data-text="GitHub"></a>
         </div>
@@ -101,7 +109,7 @@
             </ul>
             <div class="introButtons line-by-line">
                 <a href="cv/cv.pdf" download="cv" class="colorfulButton">{{ __('Download CV') }}</a>
-                <button class="colorfulBorderButton"><span>{{ __('Contact me') }}</span></button>
+                <button onclick="location.href = '#contact';" class="colorfulBorderButton"><span>{{ __('Contact me') }}</span></button>
             </div>
         </div>
 
@@ -292,7 +300,7 @@
                 <label>{{ __('© Erik Roganský 2024. All rights reserved.') }}</label>
                 <div class="footerIcons">
                     <a href="https://facebook.com/erik.rogansky" target="_blank" class="fa-brands fa-facebook-f"></a>
-                    <a href="https://www.linkedin.com/in/erik-rogansk%C3%BD-9b75812a8/" target="_blank" class="fa-brands fa-linkedin-in"></a>
+                    <a href="https://www.linkedin.com/in/erikrogansky/" target="_blank" class="fa-brands fa-linkedin-in"></a>
                     <a href="https://instagram.com/erik_rogansky" target="_blank" class="fa-brands fa-instagram"></a>
                     <a href="https://github.com/erikrogansky" target="_blank" class="fa-brands fa-github"></a>
                 </div>

@@ -450,6 +450,7 @@ body {
     background: linear-gradient(150deg, var(--background-darker), var(--background-lighter)) padding-box fixed, linear-gradient(150deg, var(--accent-first), var(--accent-second)) border-box;
     border: 2px solid transparent;
     transition: transform 0.35s ease;
+    cursor: pointer;
 }
 
 .colorfulBorderButton::before {
@@ -758,35 +759,35 @@ body.scroll .arrowDown {
   filter: drop-shadow(1px 2px 4px black);
 }
 
-.skillsContent img[src="img/java.png"] {
+.skillsContent img[src="/img/java.png"] {
     width: 4.7em;
 }
 
-.skillsContent img[src="img/linux.png"] {
+.skillsContent img[src="/img/linux.png"] {
     width: 5.9em;
 }
 
-.skillsContent img[src="img/laravel.png"] {
+.skillsContent img[src="/img/laravel.png"] {
     width: 8em;
 }
 
-.skillsContent img[src="img/phrase.png"] {
+.skillsContent img[src="/img/phrase.png"] {
     width: 9em;
 }
 
-.skillsContent img[src="img/office.png"] {
+.skillsContent img[src="/img/office.png"] {
     width: 5.7em;
 }
 
-.skillsContent img[src="img/php.png"] {
+.skillsContent img[src="/img/php.png"] {
     width: 6.7em;
 }
 
-.skillsContent img[src="img/cpp.png"] {
+.skillsContent img[src="/img/cpp.png"] {
     width: 5.5em;
 }
 
-.skillsContent img[src="img/figma.png"] {
+.skillsContent img[src="/img/figma.png"] {
     width: 6em;
 }
 
@@ -1207,10 +1208,11 @@ body.scroll .arrowDown {
 }
 
 
+/* Terms/privacy page */
 .termsSection {
     display: flex;
     flex-direction: column;
-    padding: 4rem 4rem;
+    padding: 5rem 4rem 2rem 4rem;
 }
 
 .termsSection a {
@@ -1235,6 +1237,16 @@ body.scroll .arrowDown {
 }
 
 .termsSection h1 {
-    margin: 0.75rem 0;
+    margin: 0 0 1.5rem 0;
+    font-size: 2rem;
+    text-align: center;
 }
 
+p.wishPriv {
+    margin-top: 0.75rem;
+    margin: 0;
+}
+
+p.namePriv {
+    margin: 0;
+}
