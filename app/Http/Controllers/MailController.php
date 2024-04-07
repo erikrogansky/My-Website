@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Mail\SendMail;
 use App\Mail\SendMessageToEndUser;
+use App\Models\FormUser;
 use Mail;
 
 class MailController extends Controller {
@@ -16,6 +17,25 @@ class MailController extends Controller {
     }
 
     public function maildata(Request $request) {
+
+        $request->validate([
+            'name' => 'required|string',
+            'email' => 'required|email',
+            'phone' => 'nullable|max:32',
+            'subject' => 'required|string',
+            'message' => 'required|string'
+        ]);
+
+        $userComment = new FormUser();
+        $userComment->name = $request->input('name');
+        $userComment->email = $request->input('email');
+        $userComment->phone = $request->input('phone');
+        $userComment->subject = $request->input('subject');
+        $userComment->message = $request->input('message');
+        $userComment->save();
+
+
+
         $name = $request->name;
         $email = $request->email;
         $phone = $request->phone;

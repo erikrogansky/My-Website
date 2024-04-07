@@ -42,7 +42,7 @@
     </header>
 
 
-    @if (session('successTitle') && session('successMessage'))
+    @if (session('successMessage'))
     <div id="overlay" class="overlay"></div>
     <div id="successPopup" class="successPopup">
         <h2>{{ session('successMessage') }}</h2>
@@ -298,8 +298,8 @@
                 </div>
             </div>
             <div class="terms">
-                <a href="#">{{ __('Terms and Conditions') }}</a>
-                <a href="#">{{ __('Privacy Policy') }}</a>
+                <a href="{{ url('/terms') }}">{{ __('Terms and Conditions') }}</a>
+                <a href="{{ url('/privacy') }}">{{ __('Privacy Policy') }}</a>
             </div>
         </div>
     </footer>

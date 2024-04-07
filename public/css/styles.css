@@ -126,11 +126,12 @@ body {
     display: grid;
     grid-template-columns: 20% 60% 20%;
     padding-top: 1em;
-    padding-bottom: 1em;
+    padding-bottom: 0.8em;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 9999;
+    backdrop-filter: blur(5px);
 }
 
 .headerCategories {
@@ -174,7 +175,7 @@ body {
     width: 25px;
     height: auto;
     cursor: pointer;
-    display: block;
+    display: none;                            /* Don't forget to change to block!!! */
 }
 
 #selectedLanguage {
@@ -1236,3 +1237,4 @@ body.scroll .arrowDown {
 .termsSection h1 {
     margin: 0.75rem 0;
 }
+
