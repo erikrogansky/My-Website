@@ -8,6 +8,9 @@
     <meta name="robots" content="index, follow">
     <meta name='author' content='Erik Roganský, roganskyerik@gmail.com'>
     <meta name="google-site-verification" content="-fH-o9fmZnq5NLOP63n2X1sTgt3zMJxmoqezZzFcGKU" />
+    @foreach(config('app.available_locales') as $locale => $language)
+    <link rel="alternate" hreflang="{{ $language }}" href="{{ url()->current() }}/lang/{{ $language }}">
+    @endforeach
     <link href="/css/styles.css" rel="stylesheet">
     <link rel="icon" href="/img/logo-tr.png">
     <link rel="preload" href="https://fonts.adobe.com/fonts/cofo-sans-variable" as="font" crossorigin="anonymous">

@@ -3,10 +3,12 @@
 <head>
 <meta charset="UTF-8">
     <meta name="keywords" content="Erik Roganský, Roganský, Erik">
-    <meta name="description" content="Informatics student with a passion for learning and growth, skilled in web and software development as well as translation work.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name='author' content='Erik Roganský, roganskyerik@gmail.com'>
     <meta name="google-site-verification" content="-fH-o9fmZnq5NLOP63n2X1sTgt3zMJxmoqezZzFcGKU" />
+    @foreach(config('app.available_locales') as $locale => $language)
+    <link rel="alternate" hreflang="{{ $language }}" href="{{ url()->current() }}/lang/{{ $language }}">
+    @endforeach
     <link href="/css/styles.css" rel="stylesheet">
     <link rel="icon" href="/img/logo-tr.png">
     <link rel="preload" href="https://fonts.adobe.com/fonts/cofo-sans-variable" as="font" crossorigin="anonymous">

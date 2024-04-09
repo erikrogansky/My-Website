@@ -19,7 +19,11 @@ Route::get('/lang/{locale}', function ($locale) {
     app()->setLocale($locale);
     session()->put('locale', $locale);
     
-    return redirect()->back();
+    if (url()->previous()) {
+        return redirect()->back();
+    } else {
+        return redirect()->route('/');
+    }
 })->name('langSwitch');
 
 Route::post ('/send-mail',[MailController::class,'maildata'])->name('send_mail');
