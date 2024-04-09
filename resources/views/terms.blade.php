@@ -31,10 +31,10 @@
                 </div>
             </div>
             <div class="headerLanguage">
-                <img id="selectedLanguage" src="/img/us.png" alt="ENG">
+                <img id="selectedLanguage" src="{{ __('/img/us.png') }}" alt="{{ __('ENG') }}">
                 <div class="dropdownContent">
-                    <img src="/img/sk.png" alt="SVK" onclick="location.href = '{{ route('langSwitch', 'sk') }}';">
-                    <img src="/img/us.png" alt="ENG" onclick="changeLanguage('ENG')" style="display: none;">
+                    <img src="{{ __('/img/sk.png') }}" alt="{{ __('SVK') }}" onclick="location.href = '{{ route('langSwitch', __('sk')) }}';">
+                    <img src="{{ __('/img/us.png') }}" alt="{{ __('ENG') }}" onclick="changeLanguage('ENG')" style="display: none;">
                 </div>
             </div>
         </div>
@@ -43,72 +43,71 @@
     <button onclick="goToTop()" id="goToTopBtn" class="fa-solid fa-arrow-up"></button>
 
     <section class="termsSection">
-    <h1>Terms and Conditions</h1>
-    <p>Welcome to Erik Roganský!</p>
-    <p>These terms and conditions outline the rules and regulations for the use of Erik Roganský's Website, located at <a href="https://roganskyerik.com">roganskyerik.com</a>.</p>
-    <p>By accessing this website, we assume you accept these terms and conditions. Do not continue to use Erik Roganský if you do not agree to take all of the terms and conditions stated on this page.</p>
+    <h1>{{ __('Terms and Conditions') }}</h1>
+    <p>{{ __('Welcome to my website!') }}</p>
+    <p>{{ __('These terms and conditions outline the rules and regulations for the use of my website, located at') }} <a href="https://roganskyerik.com">roganskyerik.com</a>.</p>
+    <p>{{ __('By accessing this website, it is presumed that you accept and agree to abide by these terms and conditions. If you do not agree with any part of these terms and conditions, kindly refrain from utilizing my website.') }}</p>
 
-    <h2>License:</h2>
-    <p>Unless otherwise stated, Erik Roganský and/or its licensors own the intellectual property rights for all material on Erik Roganský. All intellectual property rights are reserved. You may access this from Erik Roganský for your own personal use subjected to restrictions set in these terms and conditions.</p>
-    <p>You must not:</p>
+    <h2>{{ __('License:') }}</h2>
+    <p>{{ __('Unless otherwise stated, I, as the owner of this website, own the intellectual property rights for all material on this platform. All such rights are reserved. Access to this website is granted solely for personal use, subject to the restrictions outlined in these terms and conditions.') }}</p>
+    <p>{{ __('You must not:') }}</p>
     <ul>
-        <li>Copy or republish material from Erik Roganský</li>
-        <li>Sell, rent, or sub-license material from Erik Roganský</li>
-        <li>Reproduce, duplicate or copy material from Erik Roganský</li>
-        <li>Redistribute content from Erik Roganský</li>
+        <li>{{ __('Copy or republish material from my website') }}</li>
+        <li>{{ __('Sell, rent, or sub-license material from my website') }}</li>
+        <li>{{ __('Reproduce, duplicate or copy material from my website') }}</li>
+        <li>{{ __('Redistribute content from my website') }}</li>
     </ul>
-    <p>This Agreement shall begin on the date hereof.</p>
+    <p>{{ __('This Agreement shall begin on the date hereof.') }}</p>
 
-    <h2>Hyperlinking to our Content:</h2>
-    <p>The following organizations may link to our Website without prior written approval:</p>
+    <h2>{{ __('Hyperlinking to my Content:') }}</h2>
+    <p>{{ __('The following organizations may link to my website without prior written approval:') }}</p>
     <ul>
-        <li>Government agencies;</li>
-        <li>Search engines;</li>
-        <li>News organizations;</li>
-        <li>Online directory distributors may link to our Website in the same manner as they hyperlink to the Websites of other listed businesses; and</li>
-        <li>System-wide Accredited Businesses except soliciting non-profit organizations, charity shopping malls, and charity fundraising groups which may not hyperlink to our Web site.</li>
+        <li>{{ __('Government agencies;') }}</li>
+        <li>{{ __('Search engines;') }}</li>
+        <li>{{ __('News organizations;') }}</li>
+        <li>{{ __('Online directory distributors may link to my website in the same manner as they hyperlink to the Websites of other listed businesses; and') }}</li>
+        <li>{{ __('System-wide Accredited Businesses except soliciting non-profit organizations, charity shopping malls, and charity fundraising groups which may not hyperlink to my website.') }}</li>
     </ul>
-    <p>These organizations may link to our home page, to publications, or to other Website information so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement, or approval of the linking party and its products and/or services; and (c) fits within the context of the linking party's site.</p>
-    <p>We may consider and approve other link requests from the following types of organizations:</p>
+    <p>{{ __('These organizations may link to home page, to publications, or to other website information so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement, or approval of the linking party and its products and/or services; and (c) fits within the context of the linking party’s site.') }}</p>
+    <p>{{ __('I may consider and approve other link requests from the following types of organizations:') }}</p>
     <ul>
-        <li>commonly-known consumer and/or business information sources;</li>
-        <li>associations or other groups representing charities;</li>
-        <li>online directory distributors;</li>
-        <li>internet portals;</li>
-        <li>accounting, law, and consulting firms; and</li>
-        <li>educational institutions and trade associations.</li>
+        <li>{{ __('commonly-known consumer and/or business information sources;') }}</li>
+        <li>{{ __('associations or other groups representing charities;') }}</li>
+        <li>{{ __('online directory distributors;') }}</li>
+        <li>{{ __('internet portals;') }}</li>
+        <li>{{ __('accounting, law, and consulting firms; and') }}</li>
+        <li>{{ __('educational institutions and trade associations.') }}</li>
     </ul>
-    <p>We will approve link requests from these organizations if we decide that: (a) the link would not make us look unfavorably to ourselves or to our accredited businesses; (b) the organization does not have any negative records with us; (c) the benefit to us from the visibility of the hyperlink compensates the absence of Erik Roganský; and (d) the link is in the context of general resource information.</p>
-    <p>These organizations may link to our home page so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement, or approval of the linking party and its products or services; and (c) fits within the context of the linking party's site.</p>
-    <p>If you are one of the organizations listed in paragraph 2 above and are interested in linking to our website, you must inform us by sending an e-mail to Erik Roganský. Please include your name, your organization name, contact information as well as the URL of your site, a list of any URLs from which you intend to link to our Website, and a list of the URLs on our site to which you would like to link. Wait 2-3 weeks for a response.</p>
-    <p>Approved organizations may hyperlink to our Website as follows:</p>
+    <p>{{ __('I will approve link requests from these organizations if I decide that: (a) the link would not make me look unfavorably to myself or to my accredited businesses; (b) the organization does not have any negative records with me; (c) the benefits to me from the visibility of the hyperlink compensate for the absence of explicit endorsement of my website; and (d) the link is in the context of general resource information.') }}</p>
+    <p>{{ __('These organizations may link to home page so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement, or approval of the linking party and its products or services; and (c) fits within the context of the linking party’s site.') }}</p>
+    <p>{{ __('If you are one of the organizations listed in paragraph 2 above and are interested in linking to my website, you must inform me by sending an e-mail. Please include your name, your organization name, contact information as well as the URL of your site, a list of any URLs from which you intend to link to my website, and a list of the URLs on my site to which you would like to link.') }}</p>
+    <p>{{ __('Approved organizations may hyperlink to my website as follows:') }}</p>
     <ul>
-        <li>By use of our corporate name; or</li>
-        <li>By use of the uniform resource locator being linked to; or</li>
-        <li>Using any other description of our Website being linked to that makes sense within the context and format of content on the linking party's site.</li>
+        <li>{{ __('By use of my name; or') }}</li>
+        <li>{{ __('By use of the uniform resource locator being linked to; or') }}</li>
+        <li>{{ __('Using any other description of my website being linked to that makes sense within the context and format of content on the linking party’s site.') }}</li>
     </ul>
-    <p>No use of Erik Roganský's logo or other artwork will be allowed for linking absent a trademark license agreement.</p>
+    <p>{{ __('No use of my logo or other artwork will be allowed for linking absent a trademark license agreement.') }}</p>
 
-    <h2>Content Liability:</h2>
-    <p>We shall not be held responsible for any content that appears on your Website. You agree to protect and defend us against all claims that are raised on your Website. No link(s) should appear on any Website that may be interpreted as libelous, obscene, or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any third party rights.</p>
+    <h2>{{ __('Content Liability:') }}</h2>
+    <p>{{ __('I shall not be held responsible for any content that appears on your Website. You agree to protect and defend me against all claims that are raised on your Website. No link(s) should appear on any Website that may be interpreted as libelous, obscene, or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any third party rights.') }}</p>
 
-    <h2>Reservation of Rights:</h2>
-    <p>We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amend these terms and conditions and its linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.</p>
+    <h2>{{ __('Reservation of Rights:') }}</h2>
+    <p>{{ __('I reserve the right to request that you remove all links or any particular link to my website. You approve to immediately remove all links to my website upon request. I also reserve the right to amend these terms and conditions and its linking policy at any time. By continuously linking to my website, you agree to be bound to and follow these linking terms and conditions.') }}</p>
 
-    <h2>Removal of links from our website:</h2>
-    <p>If you find any link on our Website that is offensive for any reason, you are free to contact and inform us at any moment. We will consider requests to remove links, but we are not obligated to or so or to respond to you directly.</p>
-    <p>We do not ensure that the information on this website is correct. We do not warrant its completeness or accuracy, nor do we promise to ensure that the website remains available or that the material on the website is kept up to date.</p>
+    <h2>{{ __('Removal of links from my website:') }}</h2>
+    <p>{{ __('If you find any link on my website that is offensive for any reason, you are free to contact and inform me at any moment. I will consider requests to remove links, but I am not obligated to or so or to respond to you directly.') }}</p>
 
-    <h2>Disclaimer:</h2>
-    <p>To the maximum extent permitted by applicable law, we exclude all representations, warranties, and conditions relating to our website and the use of this website. Nothing in this disclaimer will:</p>
+    <h2>{{ __('Disclaimer:') }}</h2>
+    <p>{{ __('To the maximum extent permitted by applicable law, I exclude all representations, warranties, and conditions relating to my website and the use of this website. Nothing in this disclaimer will:') }}</p>
     <ul>
-        <li>limit or exclude our or your liability for death or personal injury;</li>
-        <li>limit or exclude our or your liability for fraud or fraudulent misrepresentation;</li>
-        <li>limit any of our or your liabilities in any way that is not permitted under applicable law; or</li>
-        <li>exclude any of our or your liabilities that may not be excluded under applicable law.</li>
+        <li>{{ __('limit or exclude my or your liability for death or personal injury;') }}</li>
+        <li>{{ __('limit or exclude my or your liability for fraud or fraudulent misrepresentation;') }}</li>
+        <li>{{ __('limit any of my or your liabilities in any way that is not permitted under applicable law; or') }}</li>
+        <li>{{ __('exclude any of my or your liabilities that may not be excluded under applicable law.') }}</li>
     </ul>
-    <p>The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer, including liabilities arising in contract, in tort, and for breach of statutory duty.</p>
-    <p>As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.</p>
+    <p>{{ __('The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer, including liabilities arising in contract, in tort, and for breach of statutory duty.') }}</p>
+    <p>{{ __('As long as the website and the information and services on the website are provided free of charge, I will not be liable for any loss or damage of any nature.') }}</p>
     </section>
 
     <footer>

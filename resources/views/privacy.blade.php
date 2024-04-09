@@ -31,10 +31,10 @@
                 </div>
             </div>
             <div class="headerLanguage">
-                <img id="selectedLanguage" src="/img/us.png" alt="ENG">
+                <img id="selectedLanguage" src="{{ __('/img/us.png') }}" alt="{{ __('ENG') }}">
                 <div class="dropdownContent">
-                    <img src="/img/sk.png" alt="SVK" onclick="location.href = '{{ route('langSwitch', 'sk') }}';">
-                    <img src="/img/us.png" alt="ENG" onclick="changeLanguage('ENG')" style="display: none;">
+                    <img src="{{ __('/img/sk.png') }}" alt="{{ __('SVK') }}" onclick="location.href = '{{ route('langSwitch', __('sk')) }}';">
+                    <img src="{{ __('/img/us.png') }}" alt="{{ __('ENG') }}" onclick="changeLanguage('ENG')" style="display: none;">
                 </div>
             </div>
         </div>

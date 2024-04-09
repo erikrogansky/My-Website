@@ -226,7 +226,7 @@ body {
     width: 25px;
     height: auto;
     cursor: pointer;
-    display: block;                            /* Don't forget to change to block!!! */
+    display: block;
 }
 
 #selectedLanguage {

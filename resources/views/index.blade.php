@@ -101,11 +101,11 @@
             <h1 class="line-by-line">Erik Roganský</h1>
             <hr class="line-by-line">
             <h2 class="line-by-line">{{ __('Informatics Student / Freelance Translator') }}</h2>
-            <p class="line-by-line">{{ __('I am an informatics student with a strong interest in ') }}<strong>{{ __('web development') }}</strong>, <strong>Java</strong>, {{ __('and') }} <strong>C++</strong>. {{ __('Professionally, I am currently mostly involved in') }} <strong>{{ __('English-Slovak translation') }}</strong>{{ __(' work.') }}</p>
+            <p class="line-by-line">{{ __('I am an informatics student with a strong interest in ') }}<strong>{{ __('web development,') }}</strong> <strong>{{ __('Java,') }}</strong> {{ __('and') }} <strong>C++</strong>. {{ __('Professionally, I am currently mostly involved in') }} <strong>{{ __('English-Slovak translation') }}</strong>{{ __(' work.') }}</p>
             <ul>
                 <li class="line-by-line">{{ __('Every single detail matters') }}</li>
                 <li class="line-by-line">{{ __('Self-growth and improvement is crucial') }}</li>
-                <li class="line-by-line">{{ __('Lorem ipsum dolor sit amet') }}</li>
+                <li class="line-by-line">{{ __('Consistency and discipline are vital') }}</li>
             </ul>
             <div class="introButtons line-by-line">
                 <a href="cv/cv.pdf" download="cv" class="colorfulButton">{{ __('Download CV') }}</a>
@@ -282,11 +282,11 @@
             <div class="contactForm">
                 <form id="contactForm" action="{{ route('send_mail') }}" method="POST" enctype="multipart/form-data">
                 @csrf
-                    <input type="text" placeholder="Name" class="basicInput slide-up" name="name" required>
+                    <input type="text" placeholder="{{ __('Name') }}" class="basicInput slide-up" name="name" required>
                     <input type="text" placeholder="Email" class="basicInput slide-up" name="email" required>
-                    <input type="text" placeholder="Phone number (optional)" class="basicInput slide-up" name="phone">
-                    <input type="text" placeholder="Subject" class="basicInput slide-up" name="subject" required>
-                    <textarea placeholder="Message" class="basicInput slide-up" name="message" required></textarea>
+                    <input type="text" placeholder="{{ __('Phone number (optional)') }}" class="basicInput slide-up" name="phone">
+                    <input type="text" placeholder="{{ __('Subject') }}" class="basicInput slide-up" name="subject" required>
+                    <textarea placeholder="{{ __('Message') }}" class="basicInput slide-up" name="message" required></textarea>
                     <button id="submitButton" class="colorfulButton slide-up">{{ __('Send message') }}</button>
                 </form>
             </div>
