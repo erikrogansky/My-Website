@@ -6,6 +6,13 @@
     "Languages": "Jazyky",
     "Experience": "Skúsenosti",
     "Contact": "Kontakt",
+
+    "/img/us.png": "/img/sk.png",
+    "/img/sk.png": "/img/us.png",
+    "SVK": "ENG",
+    "ENG": "SVK",
+    "sk": "en",
+
     "Hello, I am": "Dobrý deň, som",
     "Informatics Student / Freelance Translator": "Študent informatiky / Prekladateľ",
     "I am an informatics student with a strong interest in ": "Som študent informatiky so záľobou vo ",
