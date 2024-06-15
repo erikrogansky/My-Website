@@ -226,7 +226,7 @@ body {
     width: 25px;
     height: auto;
     cursor: pointer;
-    display: block;
+    display: block;                            /* Don't forget to change to block!!! */
 }
 
 #selectedLanguage {
@@ -498,7 +498,7 @@ body {
     font-size: 1em;
     outline: none;
     border-radius: 1.5em;
-    background: linear-gradient(150deg, var(--background-darker), var(--background-lighter)) padding-box fixed, linear-gradient(150deg, var(--accent-first), var(--accent-second)) border-box;
+    background: linear-gradient(150deg, #0c0828, #0d0729) padding-box fixed, linear-gradient(150deg, var(--accent-first), var(--accent-second)) border-box;
     border: 2px solid transparent;
     transition: transform 0.35s ease;
     cursor: pointer;
@@ -632,7 +632,7 @@ body.scroll .arrowDown {
 .services > h1 {
     font-size: 40px;
     font-weight: bold;
-    padding-bottom: 10px;
+    padding-bottom: 60px;
     margin: 0;
 }
 
@@ -640,28 +640,22 @@ body.scroll .arrowDown {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
-    gap: 7.5em;
-    height: 20em;
+    column-gap: 7.5em;
+    row-gap: 2.5em;
+    min-height: 20em;
     margin-bottom: 20px;
-}
-
-.servicesContentAdd {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-content: center;
-    gap: 10em;
-    height: 15em;
-    width: 23em;
-    margin-left: auto; 
-    margin-right: auto;
 }
 
 .servicesItem {
     display: grid;
-    grid-template-rows: 55% auto auto;
+    grid-template-rows: 55% 50px auto;
     text-align: center;
     justify-items: center;
     align-items: flex-end;
+}
+
+.servicesItem.center {
+    grid-column: 2 / span 1;
 }
 
 .servicesContent img:first-of-type {
@@ -690,6 +684,52 @@ body.scroll .arrowDown {
     font-weight: 400;
     padding-bottom: 2.5px;
     align-self: flex-start;
+}
+
+@media (max-width: 1250px) {
+    .servicesItem {
+        display: grid;
+        grid-template-rows: 55% auto auto;
+        text-align: center;
+        justify-items: center;
+        align-items: flex-end;
+    }
+
+    .servicesContent {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        min-height: 20em;
+        margin-bottom: 20px;
+    }
+    
+}
+
+@media (max-width: 1060px) {
+    .servicesContent {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        column-gap: 7.5em;
+        row-gap: 2.5em;
+        min-height: 20em;
+        margin-bottom: 20px;
+    }
+    .center {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 730px) {
+    .servicesContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        column-gap: 7.5em;
+        row-gap: 2.5em;
+        min-height: 20em;
+        margin-bottom: 20px;
+    }
 }
 
 
@@ -851,6 +891,31 @@ body.scroll .arrowDown {
     }
 }
 
+@media (max-width: 800px) {
+    .skillsContent {
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 25px;
+    }
+}
+
+@media (max-width: 650px) {
+    .skillsContent {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 25px;
+    }
+    .skillsContent {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(6, 1fr);
+        row-gap: 25px;
+    }
+}
+
 
 /* Languages section */
 .languages {
@@ -1004,6 +1069,22 @@ body.scroll .arrowDown {
     }
 }
 
+@media (max-width: 700px) {
+    .languagesContent {
+        grid-template-columns: auto;
+        gap: 0;
+        row-gap: 0;
+    }
+
+    .languageItem:nth-of-type(3) {
+        grid-column: auto;
+    }
+    
+    .languagesContentAdd {
+        grid-template-columns: auto;
+        gap: 0;
+    }
+}
 
 
 /* Experience section */
@@ -1034,8 +1115,8 @@ body.scroll .arrowDown {
 .experienceContent {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 7em;
-    margin: 0 2em;
+    column-gap: 7em;
+    row-gap: 2em;
 }
 
 .experienceItem {
@@ -1065,6 +1146,29 @@ body.scroll .arrowDown {
 
 .experienceItem li {
     padding-bottom: 10px;
+}
+
+.experienceItem.center {
+    grid-column: span 2;
+    width: 50%;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+@media (max-width: 900px) {
+    .experienceContent {
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        row-gap: 2em;
+    }
+    
+    .experienceItem.center {
+        grid-column: auto;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 

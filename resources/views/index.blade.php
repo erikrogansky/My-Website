@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="Erik Roganský, Roganský, Erik">
-    <meta name="description" content="Informatics student with a passion for learning and growth, skilled in web and software development as well as translation work.">
+    <meta name="description" content="{{ __('Informatics student with a passion for learning and growth, skilled in web and software development as well as translation work.') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
     <meta name='author' content='Erik Roganský, roganskyerik@gmail.com'>
     <meta name="google-site-verification" content="-fH-o9fmZnq5NLOP63n2X1sTgt3zMJxmoqezZzFcGKU" />
+    <link rel="canonical" href="https://roganskyerik.com/" />
+    <link rel="alternate" hreflang="en" href="https://roganskyerik.com/" />
     @foreach(config('app.available_locales') as $locale => $language)
     <link rel="alternate" hreflang="{{ $language }}" href="{{ url()->current() }}/lang/{{ $language }}">
     @endforeach
@@ -146,9 +148,7 @@
                 <label class="slide-up">{{ __('Software development') }}</label>
                 <label class="slide-up">{{ __('I provide comprehensive software development services in Java and C++, ensuring tailored solutions for applications and systems to meet specific needs and standards.') }}</label>
             </div>
-        </div>
-        <div class="servicesContentAdd">
-            <div class="servicesItem">
+            <div class="servicesItem center">
                 <i class="fa-solid fa-question slide-up"></i>
                 <label class="slide-up">{{ __('Didn’t find what you need?') }}</label>
                 <label class="slide-up">{{ __('If the service you’re looking for is not listed, contact me! If I have the necessary skills, I am sure we can find a solution.') }}</label>
@@ -239,7 +239,7 @@
             <div class="experienceItem">
                 <label class="slide-up">{{ __('Translator (English to Slovak)') }}</label>
                 <label class="slide-up">{{ __('Self-employed') }}</label>
-                <label class="slide-up">{{ __('2023 - present') }}</label>
+                <label class="slide-up">{{ __('Aug 2023 - present') }}</label>
                 <ul>
                     <li class="slide-up">{{ __('Skilled in translating predominantly IT products with additional experience across diverse fields') }}</li>
                     <li class="slide-up">{{ __('Collaborating with a team of translators to complete large projects efficiently and within deadlines') }}</li>
@@ -251,11 +251,23 @@
             <div class="experienceItem">
                 <label class="slide-up">{{ __('Artificial intelligence prompt analyst') }}</label>
                 <label class="slide-up">{{ __('Self-employed') }}</label>
-                <label class="slide-up">{{ __('2023 - present') }}</label>
+                <label class="slide-up">{{ __('Jul 2023 - present') }}</label>
                 <ul>
                     <li class="slide-up">{{ __('Extensive experience in text analysis and comparative assessment') }}</li>
                     <li class="slide-up">{{ __('Comparing and evaluating the outputs of different prompts for various generative AI tasks, such as text summarization, sentiment analysis, and content creation') }}</li>
                     <li class="slide-up">{{ __('Identifying and reporting the strengths and weaknesses of different prompts, as well as the potential ethical, cultural, and social implications of the generated outputs') }}</li>
+                </ul>
+            </div>
+
+            <div class="experienceItem center">
+                <label class="slide-up">{{ __('UX Researcher') }}</label>
+                <label class="slide-up">{{ __('UXtweak (Self-employed)') }}</label>
+                <label class="slide-up">{{ __('Jun 2024 - present') }}</label>
+                <ul>
+                    <li class="slide-up">{{ __('Designing and iterating on mockups to enhance user experience and interface design') }}</li>
+                    <li class="slide-up">{{ __('Collaborating closely with the UX team to integrate user feedback and usability findings into design iterations') }}</li>
+                    <li class="slide-up">{{ __('Analyzing current app features and proposing new functionalities based on industry trends and user needs') }}</li>
+                    <li class="slide-up">{{ __('Utilizing knowledge of UX principles to ensure designs are intuitive, accessible, and aligned with company goals') }}</li>
                 </ul>
             </div>
         </div>
