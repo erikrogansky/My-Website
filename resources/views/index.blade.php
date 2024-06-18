@@ -105,7 +105,7 @@
             <label class="colorful line-by-line">{{ __('Hello, I am') }}</label>
             <h1 class="line-by-line">Erik Roganský</h1>
             <hr class="line-by-line">
-            <h2 class="line-by-line">{{ __('Informatics Student / Freelance Translator') }}</h2>
+            <h2 class="line-by-line">{{ __('UX Researcher / Freelance Translator') }}</h2>
             <p class="line-by-line">{{ __('I am an informatics student with a strong interest in ') }}<strong>{{ __('web development,') }}</strong> <strong>{{ __('Java,') }}</strong> {{ __('and') }} <strong>C++</strong>. {{ __('Professionally, I am currently mostly involved in') }} <strong>{{ __('English-Slovak translation') }}</strong>{{ __(' work.') }}</p>
             <ul>
                 <li class="line-by-line">{{ __('Every single detail matters') }}</li>
@@ -162,7 +162,8 @@
         <h1 class="slide-up">{{ __('My studies') }}</h1>
         <div class="educationContent">
             <div class="educationItem slide-up">
-                <label>{{ __('Faculty of Informatics and Information Technologies') }}<br>{{ __('Slovak University of Technology in Bratislava') }}</label>
+                <label id="longSchool">{{ __('Faculty of Informatics and Information Technologies') }}<br>{{ __('Slovak University of Technology in Bratislava') }}</label>
+                <label id="shortSchool">{{ __('FIIT STU in Bratislava') }}</label>
                 <label>{{ __('Bachelor of Informatics') }}</label>
                 <label>{{ __('2022 - present') }}</label>
                 <a href="https://www.fiit.stuba.sk/" target="_blank" class="fa-solid fa-link"></a>
@@ -204,6 +205,7 @@
                 <div class="chart-container slide-up" id="chart1"></div>
                 <label class="slide-up">{{ __('English') }}</label>
                 <label class="slide-up">{{ __('Professional working proficiency') }}</label>
+                <label class="slide-up">{{ __('(passed national exam C1-C2)') }}</label>
             </div>
             <div class="languageItem">
                 <div class="chart-container slide-up" id="chart2"></div>

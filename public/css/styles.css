@@ -226,7 +226,7 @@ body {
     width: 25px;
     height: auto;
     cursor: pointer;
-    display: block;                            /* Don't forget to change to block!!! */
+    display: block;
 }
 
 #selectedLanguage {
@@ -265,11 +265,12 @@ body {
 
 /* Intro styles */
 .intro {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 12% 37% 51%;
     height: 96vh;
-    padding-top: 4vh;
+    max-height: 850px;
+    padding-top: min(50px, 4vh);
+    gap: 0;
 }
 
 .introIcons {
@@ -368,11 +369,12 @@ body {
 .introText {
     display: flex;
     flex-direction: column;
-    margin-top: 11%;
+    margin-top: 35%;
     margin-left: 12.5%;
-    width: 33em;
+    width: 90%;
     opacity: 0;
     animation: fadeIn 2s forwards;
+    align-content: flex-end;
 }
 
   
@@ -543,18 +545,22 @@ body {
 
 
 .introPhoto {
+    display: flex;
     width: auto;
     overflow: hidden;
+    align-items: flex-end;
+
 }
 
 .photoContainer {
     width: 100%;
     margin-left: 5em;
-    margin-top: 3em;
+    margin-bottom: -5px;
 }
 
 .photoContainer img {
-    width: 75%;
+    width: 78%;
+    margin-top: 1em;
 }
 
 .arrowDown {
@@ -607,6 +613,86 @@ body.scroll .arrowDown {
         transform: translateY(0) scale(1);
         filter: blur(0);
         opacity: 1;
+    }
+}
+
+@media (max-width: 1500px) {
+    .intro {
+        max-height: 825px;
+    }
+}
+
+@media (max-width: 1450px) {
+    .intro {
+        max-height: 775px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .intro {
+        max-height: 725px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .intro {
+        max-height: 700px;
+    }
+
+    .photoContainer img {
+        width: 82%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .intro {
+        max-height: 675px;
+    }
+
+    .photoContainer img {
+        width: 86%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .intro {
+        max-height: 650px;
+    }
+
+    .photoContainer img {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1050px) {
+    .intro {
+        grid-template-columns: 12% 78% 10%;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+            "col1 col2 col4"
+            "col1 col3 col4";
+    }
+
+    .intro > :nth-child(1) {
+        grid-area: col1;
+    }
+
+    .intro > :nth-child(2) {
+        grid-area: col2;
+    }
+
+    .intro > :nth-child(3) {
+        grid-area: col3;
+    }
+
+    .introText {
+        margin-top: 4em;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+        opacity: 0;
+        animation: fadeIn 2s forwards;
+        align-content: flex-end;
     }
 }
 
@@ -663,7 +749,7 @@ body.scroll .arrowDown {
     margin-bottom: 15px;
 }
 
-.servicesContent i, .servicesContentAdd i {
+.servicesContent i {
     font-size: 6.75em;
     margin-bottom: 15px;
 }
@@ -732,8 +818,13 @@ body.scroll .arrowDown {
     }
 }
 
-
-
+@media (max-width: 550px) {
+    .services {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    
+}
 
 
 /* Education section */
@@ -758,7 +849,7 @@ body.scroll .arrowDown {
 
 .educationContent {
     align-self: center;
-    width: 95%;
+    width: 100%;
     padding-top: 3em;
     padding-bottom: 5em;
     font-size: 17px;
@@ -784,10 +875,11 @@ body.scroll .arrowDown {
  
 .educationItem label:first-of-type {
     padding-left: 0.2em;
+    padding-right: 0.75em;
 }
 
 .educationItem label:not(:first-of-type) {
-    padding-left: 0.75em;
+    padding: 0 0.75em;
 }
 
 .educationItem a {
@@ -807,7 +899,47 @@ body.scroll .arrowDown {
     background-image: linear-gradient(to right, var(--accent-first), var(--accent-second));
 }
 
+#shortSchool {
+    display: none;
+}
 
+@media (max-width: 750px) {
+    .educationItem {
+        display: grid;
+        grid-template-columns: auto 25% 20% 2.5em;
+    }
+}
+
+@media (max-width: 650px) {
+    #shortSchool {
+        display: block;
+        padding-left: 0.2em;
+        padding-right: 0.75em;
+    }
+
+    #longSchool {
+        display: none;
+    }
+
+    .educationItem {
+        display: grid;
+        grid-template-columns: auto 30% 20% 2.5em;
+    }
+}
+
+@media (max-width: 550px) {
+    .education {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .educationItem {
+        display: grid;
+        grid-template-columns: auto 32% 25% 2.5em;
+    }
+}
 
 
 /* Skills section */
@@ -916,6 +1048,12 @@ body.scroll .arrowDown {
     }
 }
 
+@media (max-width: 550px) {
+    .skills {
+        padding-left: 2em;
+        padding-right: 2em;
+    }   
+}
 
 /* Languages section */
 .languages {
@@ -1086,6 +1224,14 @@ body.scroll .arrowDown {
     }
 }
 
+@media (max-width: 550px) {
+    .languages {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    
+}
+
 
 /* Experience section */
 .experience {
@@ -1171,6 +1317,14 @@ body.scroll .arrowDown {
     }
 }
 
+@media (max-width: 550px) {
+    .experience {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    
+}
+
 
 /* Contact section */
 .contact {
@@ -1179,6 +1333,7 @@ body.scroll .arrowDown {
     padding-top: 3.5em;
     padding-bottom: 3em;
     padding-left: 5em;
+    padding-right: 5em;
 }
 
 .contact > label {
@@ -1257,12 +1412,13 @@ body.scroll .arrowDown {
 .contactForm {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
 }
 
 .contactForm form {
-    width: 60%;
+    width: 70%;
+    padding-right: 2em;
 }
 
 .contactForm input {
@@ -1325,6 +1481,43 @@ body.scroll .arrowDown {
     height: 2.4em;
     width: 8.4em;
     align-items: center;
+}
+
+@media (max-width: 1200px) {
+    .contactForm form {
+        width: 75%;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 950px) {
+    .contactContent {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .contactForm form {
+        width: 80%;
+        padding: 30px 0 0 0;
+    }
+
+    .contactForm {
+        align-items: center;
+    }
+}
+
+@media (max-width: 750px) {
+    .contactForm form {
+        width: 100%;
+        padding: 30px 0 0 0;
+    }
+}
+
+@media (max-width: 550px) {
+    .contact {
+        padding-left: 2em;
+        padding-right: 2em;
+    }   
 }
 
 
@@ -1449,4 +1642,11 @@ p.wishPriv {
 
 p.namePriv {
     margin: 0;
+}
+
+@media (max-width: 550px) {
+    .termsSection {
+        padding-left: 2em;
+        padding-right: 2em;
+    }   
 }
