@@ -253,3 +253,13 @@ $(document).ready(function(){
       $('.introIcons a').css('opacity', '1');
   });
 });
+
+
+/* Close navbar when I click it outside*/
+document.addEventListener('click', function(event) {
+  const pane = document.getElementById('navPane');
+  const menuButton = document.getElementById('mobileNavbar');
+  if (!pane.contains(event.target) && !menuButton.contains(event.target)) {
+      pane.style.left = '-300px';
+  }
+});

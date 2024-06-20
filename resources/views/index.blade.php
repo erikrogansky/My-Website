@@ -32,7 +32,7 @@
 <body>
     <header>
         <div class="headerContainer" id="header">
-            <div></div>
+            <div><button id="mobileNavbar" class="mobileNavbar fa-solid fa-bars" onclick="document.getElementById('navPane').style.left = '0';"></button></div>
             <div class="headerCategories">
                 <div class="headerCategoriesGrid">
                     <a href="#intro">{{ __('Home') }}</a>
@@ -53,6 +53,23 @@
             </div>
         </div>
     </header>
+
+    <div id="navPane">
+        <button class="closeButton fa-solid fa-xmark" onclick="document.getElementById('navPane').style.left = '-300px';"></button>
+        <a href="#intro" onclick="document.getElementById('navPane').style.left = '-300px';">{{ __('Home') }}</a>
+        <a href="#services" onclick="document.getElementById('navPane').style.left = '-300px';">{{ __('Services') }}</a>
+        <a href="#education" onclick="document.getElementById('navPane').style.left = '-300px';">{{ __('Education') }}</a>
+        <a href="#skills" onclick="document.getElementById('navPane').style.left = '-300px';">{{ __('Skills') }}</a>
+        <a href="#languages" onclick="document.getElementById('navPane').style.left = '-300px';">{{ __('Languages') }}</a>
+        <a href="#experience" onclick="document.getElementById('navPane').style.left = '-300px';">{{ __('Experience') }}</a>
+        <a href="#contact" onclick="document.getElementById('navPane').style.left = '-300px';">{{ __('Contact') }}</a>
+        <div class="navIcons">
+            <a href="https://facebook.com/erik.rogansky" target="_blank" class="fa-brands fa-facebook-f" data-text="Facebook"></a>
+            <a href="https://www.linkedin.com/in/erikrogansky/" target="_blank" class="fa-brands fa-linkedin-in" data-text="LinkedIn"></a>
+            <a href="https://instagram.com/erik_rogansky" target="_blank" class="fa-brands fa-instagram" data-text="Instagram"></a>
+            <a href="https://github.com/erikrogansky" target="_blank" class="fa-brands fa-github" data-text="GitHub"></a>
+        </div>
+    </div>
 
 
     @if (session('successMessage'))

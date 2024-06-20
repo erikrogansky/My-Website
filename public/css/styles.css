@@ -22,6 +22,10 @@ body {
     padding: 0;
 }
 
+@media (max-width: 500px) {
+    
+}
+
 ::-webkit-scrollbar {
     width: auto;
     transition: all 0.35s ease;
@@ -263,6 +267,32 @@ body {
     opacity: 0.7;
 }
 
+.mobileNavbar {
+    color: var(--font-color);
+    background-color: transparent;
+    border: none;
+    align-self: center;
+    margin-left: 0.8em;
+    cursor: pointer;
+    margin-right: auto;
+    font-size: 1.25em;
+    display: none !important;
+}
+
+@media (max-width: 800px) {
+    .headerContainer {
+        backdrop-filter: none;
+    }
+    
+    .headerCategoriesGrid {
+        display: none;
+    }
+
+    .mobileNavbar {
+        display: block !important;
+    }
+}
+
 /* Intro styles */
 .intro {
     display: grid;
@@ -455,7 +485,7 @@ body {
 
 .introButtons {
     display: grid;
-    grid-template-columns: repeat(2, 30%);
+    grid-template-columns: repeat(2, max(30%, 145px));
     gap: 1.5em;
     height: 2.5em;
     margin-top: 0.8em;
@@ -473,6 +503,7 @@ body {
     text-align: center;
     text-decoration: none;
     transition: all 0.35s ease;
+    min-width: 145px;
 }
 
 .colorfulButton:hover {
@@ -504,6 +535,7 @@ body {
     border: 2px solid transparent;
     transition: transform 0.35s ease;
     cursor: pointer;
+    min-width: 145px;
 }
 
 .colorfulBorderButton::before {
@@ -664,15 +696,17 @@ body.scroll .arrowDown {
     }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1050px) {    
     .intro {
         grid-template-columns: 12% 78% 10%;
         grid-template-rows: auto auto;
         grid-template-areas: 
             "col1 col2 col4"
             "col1 col3 col4";
-    }
 
+        height: auto;
+    }
+ 
     .intro > :nth-child(1) {
         grid-area: col1;
     }
@@ -689,13 +723,52 @@ body.scroll .arrowDown {
         margin-top: 4em;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 4em;
         width: 75%;
         opacity: 0;
         animation: fadeIn 2s forwards;
         align-content: flex-end;
     }
+
+    .introPhoto {
+        display: none;
+    }
 }
 
+@media (max-width: 800px) {
+    .intro {
+        padding-top: 20px;
+        grid-template-areas: none;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+    }
+
+    .intro > :nth-child(1),
+    .intro > :nth-child(2),
+    .intro > :nth-child(3) {
+        grid-area: unset;
+    }
+
+    .introIcons {
+        display: none;
+    }
+}
+
+@media (max-width: 470px) {
+    .introButtons {
+        display: grid;
+        grid-template-columns: 145px;
+        grid-template-rows: 45px 45px;
+        gap: 1.5em;
+        height: 2.5em;
+        margin-top: 0.8em;
+        margin-bottom: 4em;
+    }
+
+    .intro {
+        max-height: none;
+    }
+}
 
 /* Services section */
 .services {
@@ -1650,3 +1723,65 @@ p.namePriv {
         padding-right: 2em;
     }   
 }
+
+
+/* Mobile navbar*/
+#navPane {
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    background-color: #333;
+    color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 99999;
+}
+
+#navPane > a {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    padding-left: 30px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.navPane button:hover {
+    background-color: #777;
+}
+
+.closeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.navIcons {
+    position: absolute;
+    bottom: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navIcons a {
+    font-size: 1.5em;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--font-color);
+}
+
