@@ -331,6 +331,7 @@
                     {!! RecaptchaV3::field('send_message') !!}
                     <input id="addressInput" type="text" placeholder="{{ __('Address') }}" class="basicInput" name="address">
                     <button id="submitButton" class="colorfulButton slide-up">{{ __('Send message') }}</button>
+                    <p class="slide-up">This site is protected by reCAPTCHA and the Google <a href=”https://policies.google.com/privacy” title=”Privacy Policy”>Privacy Policy</a> and <a href=”https://policies.google.com/terms” title=”Terms of Service”>Terms of Service</a> apply.</p>
                 </form>
             </div>
         </div>

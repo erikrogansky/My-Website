@@ -25,16 +25,13 @@ class MailController extends Controller {
             return redirect('/');
         }
 
-        $validator = Validator::make($input, [
-            'g-recaptcha-response' => 'required|recaptchav3:send_message,0.5'
-        ]);
-
         $request->validate([
             'name' => 'required|string',
             'email' => 'required|email',
             'phone' => 'nullable|max:32',
             'subject' => 'required|string',
-            'message' => 'required|string'
+            'message' => 'required|string',
+            'g-recaptcha-response' => 'required|recaptchav3:send_message,0.5'
         ]);
 
         $userComment = new FormUser();

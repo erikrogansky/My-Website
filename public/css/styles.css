@@ -1602,6 +1602,26 @@ body.scroll .arrowDown {
     align-items: center;
 }
 
+.contactForm p {
+    color: #8e8397;
+    font-size: 0.6em;
+    padding-top: 0.7em;
+}
+
+.contactForm p a {
+    color: #8e8397;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contactForm p a:hover {
+    background: linear-gradient(150deg, var(--accent-first), var(--accent-second));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
 @media (max-width: 1200px) {
     .contactForm form {
         width: 75%;
