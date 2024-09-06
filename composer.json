@@ -7,6 +7,7 @@
     "require": {
         "php": "^8.2",
         "jenssegers/agent": "^2.6",
+        "josiasmontag/laravel-recaptchav3": "^1.0",
         "laravel/framework": "^11.0",
         "laravel/tinker": "^2.9",
         "stevebauman/location": "^7.2"

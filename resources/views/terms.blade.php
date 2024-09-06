@@ -7,7 +7,7 @@
     <meta name='author' content='Erik Roganský, roganskyerik@gmail.com'>
     <meta name="google-site-verification" content="-fH-o9fmZnq5NLOP63n2X1sTgt3zMJxmoqezZzFcGKU" />
     @foreach(config('app.available_locales') as $locale => $language)
-    <link rel="alternate" hreflang="{{ $language }}" href="{{ url()->current() }}/lang/{{ $language }}">
+    <!-- <link rel="alternate" hreflang="{{ $language }}" href="{{ url()->current() }}/lang/{{ $language }}"> -->
     @endforeach
     <link href="/css/styles.css" rel="stylesheet">
     <link rel="icon" href="/img/logo-tr.png">
@@ -15,12 +15,15 @@
     <script src="/scripts/header.js" defer></script>
     <script src="https://kit.fontawesome.com/ac7b36a7a6.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    {!! RecaptchaV3::initJs() !!}
     <title>Terms and Conditions</title>
+    
+    <script type="text/javascript">(function(u,x,t,w,e,a,k,s){a=function(v){try{u.setItem(t+e,v)}catch(e){}v=JSON.parse(v);for(k=0;k<v.length;k++){s=x.createElement("script");s.text="(function(u,x,t,w,e,a,k){a=u[e]=function(){a.q.push(arguments)};a.q=[];a.t=+new Date;a.c=w;k=x.createElement('script');k.async=1;k.src=t;x.getElementsByTagName('head')[0].appendChild(k)})(window,document,'"+v[k].u+"',"+JSON.stringify(v[k].c)+",'"+v[k].g+"')";x.getElementsByTagName("head")[0].appendChild(s)}};try{k=u.getItem(t+e)}catch(e){}if(k){return a(k)}k=new XMLHttpRequest;k.onreadystatechange=function(){if(k.readyState==4&&k.status==200)a(k.responseText)};k.open("POST",w+e);k.send(x.URL)})(sessionStorage,document,"uxt:","https://api.uxtweak.com/snippet/","a48303c6-5222-49b4-b043-699b25c177c0");</script>
 </head>
 <body>
     <header>
         <div class="headerContainer" id="header">
-            <div></div>
+            <div><button id="mobileNavbar" class="mobileNavbar fa-solid fa-bars" onclick="document.getElementById('navPane').style.left = '0';"></button></div>
             <div class="headerCategories">
                 <div class="headerCategoriesGrid">
                     <a href="{{ url('/#intro') }}">{{ __('Home') }}</a>
@@ -33,14 +36,33 @@
                 </div>
             </div>
             <div class="headerLanguage">
-                <img id="selectedLanguage" src="{{ __('/img/us.png') }}" alt="{{ __('ENG') }}">
+                <!-- <img id="selectedLanguage" src="{{ __('/img/us.png') }}" alt="{{ __('ENG') }}">
                 <div class="dropdownContent">
                     <img src="{{ __('/img/sk.png') }}" alt="{{ __('SVK') }}" onclick="location.href = '{{ route('langSwitch', __('sk')) }}';">
                     <img src="{{ __('/img/us.png') }}" alt="{{ __('ENG') }}" onclick="changeLanguage('ENG')" style="display: none;">
-                </div>
+                </div>  -->
             </div>
         </div>
     </header>
+    
+    <div id="navPane">
+        <label class="navLabel">Menu</label>
+        <button class="closeButton fa-solid fa-xmark" onclick="document.getElementById('navPane').style.left = '-300px';"></button>
+        <hr>
+        <a href="{{ url('/#intro') }}" onclick="document.getElementById('navPane').style.left = '-300px';">{{ __('Home') }}</a>
+        <a href="{{ url('/#services') }}" onclick="document.getElementById('navPane').style.left = '-300px';">{{ __('Services') }}</a>
+        <a href="{{ url('/#education') }}" onclick="document.getElementById('navPane').style.left = '-300px';">{{ __('Education') }}</a>
+        <a href="{{ url('/#skills') }}" onclick="document.getElementById('navPane').style.left = '-300px';">{{ __('Skills') }}</a>
+        <a href="{{ url('/#languages') }}" onclick="document.getElementById('navPane').style.left = '-300px';">{{ __('Languages') }}</a>
+        <a href="{{ url('/#experience') }}" onclick="document.getElementById('navPane').style.left = '-300px';">{{ __('Experience') }}</a>
+        <a href="{{ url('/#contact') }}" onclick="document.getElementById('navPane').style.left = '-300px';">{{ __('Contact') }}</a>
+        <div class="navIcons">
+            <a href="https://facebook.com/erik.rogansky" target="_blank" class="fa-brands fa-facebook-f" data-text="Facebook"></a>
+            <a href="https://www.linkedin.com/in/erikrogansky/" target="_blank" class="fa-brands fa-linkedin-in" data-text="LinkedIn"></a>
+            <a href="https://instagram.com/erik_rogansky" target="_blank" class="fa-brands fa-instagram" data-text="Instagram"></a>
+            <a href="https://github.com/erikrogansky" target="_blank" class="fa-brands fa-github" data-text="GitHub"></a>
+        </div>
+    </div>
 
     <button onclick="goToTop()" id="goToTopBtn" class="fa-solid fa-arrow-up"></button>
 

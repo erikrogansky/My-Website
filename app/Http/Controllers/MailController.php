@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Validator;
 use App\Mail\SendMail;
 use App\Mail\SendMessageToEndUser;
 use App\Models\FormUser;
@@ -17,6 +18,16 @@ class MailController extends Controller {
     }
 
     public function maildata(Request $request) {
+
+        $input = request()->all();
+
+        if (!empty($input['address'])) {
+            return redirect('/');
+        }
+
+        $validator = Validator::make($input, [
+            'g-recaptcha-response' => 'required|recaptchav3:send_message,0.5'
+        ]);
 
         $request->validate([
             'name' => 'required|string',

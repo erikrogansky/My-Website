@@ -19,7 +19,7 @@ body {
     font-size: 18px;
     color: var(--font-color);
     margin: 0;
-    padding: 0;
+    padding: 0 calc((100vw - 1560px) / 2);
 }
 
 @media (max-width: 500px) {
@@ -134,6 +134,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
+    max-width: 1560px;
     z-index: 9999;
     backdrop-filter: blur(5px);
 }
@@ -220,7 +221,7 @@ body {
     position: relative;
     display: inline-block;
     align-self: center;
-    padding-right: 1.1em;
+    margin-right: 1.1em;
     cursor: pointer;
     margin-left: auto;
     font-size: 0.75em;
@@ -280,9 +281,9 @@ body {
 }
 
 @media (max-width: 800px) {
-    .headerContainer {
+    /* .headerContainer {
         backdrop-filter: none;
-    }
+    } */
     
     .headerCategoriesGrid {
         display: none;
@@ -393,7 +394,7 @@ body {
     background-image: url(../img/whitecircle.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 65% 93%;
+    background-size: 50% 93%;
   }
 
 .introText {
@@ -463,7 +464,7 @@ body {
 }
   
 .introText li:before {
-    content: "\f00c"; /* FontAwesome Unicode */
+    content: "\f00c";
     font-family: FontAwesome;
     display: inline-block;
     margin-left: calc( var(--icon-space) * -1 + 10px );
@@ -504,6 +505,7 @@ body {
     text-decoration: none;
     transition: all 0.35s ease;
     min-width: 145px;
+    cursor: pointer;
 }
 
 .colorfulButton:hover {
@@ -754,6 +756,16 @@ body.scroll .arrowDown {
     }
 }
 
+@media (max-width: 550px) {
+    .introText {
+        width: auto;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    
+}
+
+
 @media (max-width: 470px) {
     .introButtons {
         display: grid;
@@ -924,13 +936,15 @@ body.scroll .arrowDown {
     align-self: center;
     width: 100%;
     padding-top: 3em;
-    padding-bottom: 5em;
+    margin-bottom: 4.5em;
+    padding-bottom: 0.5em;
     font-size: 17px;
 }
 
 .educationItem {
     display: grid;
     grid-template-columns: auto 30% 15% 2.5em;
+    align-content: center;
 }
 
 .educationItem:last-of-type label, .educationItem:last-of-type a {
@@ -964,6 +978,18 @@ body.scroll .arrowDown {
     text-decoration: none;
 }
 
+.educationItem a:hover {
+    background: linear-gradient(150deg, var(--accent-first), var(--accent-second));
+    z-index: 1;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
 .education hr {
     margin-left: 0;
     margin-right: 0;
@@ -976,6 +1002,12 @@ body.scroll .arrowDown {
     display: none;
 }
 
+@media (max-width: 963px) {
+    .educationItem:last-of-type label, .educationItem:last-of-type a {
+        height: 100%;
+    }
+}
+
 @media (max-width: 750px) {
     .educationItem {
         display: grid;
@@ -985,7 +1017,7 @@ body.scroll .arrowDown {
 
 @media (max-width: 650px) {
     #shortSchool {
-        display: block;
+        display: flex;
         padding-left: 0.2em;
         padding-right: 0.75em;
     }
@@ -1005,12 +1037,19 @@ body.scroll .arrowDown {
         padding-left: 2em;
         padding-right: 2em;
     }
-}
 
-@media (max-width: 480px) {
+    .educationContent {
+        overflow-x: auto;
+    }
+
     .educationItem {
         display: grid;
-        grid-template-columns: auto 32% 25% 2.5em;
+        grid-template-columns: 190px 125px 95px 2.5em;
+        align-content: center;
+    }
+
+    .education hr {
+        width: 456px;
     }
 }
 
@@ -1111,6 +1150,7 @@ body.scroll .arrowDown {
         flex-direction: row;
         flex-wrap: nowrap;
         overflow-x: auto;
+        overflow-y: hidden;
         gap: 25px;
     }
     .skillsContent {
@@ -1466,7 +1506,9 @@ body.scroll .arrowDown {
 }
 
 .contactTextDetails strong, .contactTextTech strong {
+    display: flex;
     padding-right: 0.4em;
+    align-self: center;
 }
 
 .contactDetailsElement {
@@ -1474,6 +1516,10 @@ body.scroll .arrowDown {
     display: grid;
     grid-template-columns: 2em auto;
     margin-left: 0.6em;
+}
+
+.contactDetailsElement2 {
+    display: none;
 }
 
 .contactTextTech {
@@ -1593,6 +1639,20 @@ body.scroll .arrowDown {
     }   
 }
 
+@media (max-width: 350px) {
+    .contactDetailsElement2 {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 2em auto;
+        margin-left: 0.6em;
+    }
+
+    .contactTextTech .contactDetailsElement {
+        display: none;
+    }
+}
+
+
 
 /* Footer */
 .footerContainer {
@@ -1617,7 +1677,8 @@ body.scroll .arrowDown {
 }
 
 .copyright label {
-    padding-bottom: 0.3em;
+    padding-bottom: 5px;
+    width: auto;
 }
 
 .footerIcons {
@@ -1636,6 +1697,19 @@ body.scroll .arrowDown {
     text-align: right;
     margin-left: auto;
 }
+
+.terms a:first-of-type {
+    padding-bottom: 5px;
+}
+
+.terms a:hover {
+    background: linear-gradient(150deg, var(--accent-first), var(--accent-second));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
 
 
 
@@ -1732,7 +1806,8 @@ p.namePriv {
     position: fixed;
     top: 0;
     left: -300px;
-    background-color: #333;
+    background: linear-gradient(150deg, rgba(4, 8, 37, 0.8), rgba(39, 7, 52, 0.8));
+    backdrop-filter: blur(5px);
     color: white;
     overflow-x: hidden;
     transition: 0.5s;
@@ -1745,7 +1820,7 @@ p.namePriv {
     width: 100%;
     padding: 15px;
     margin: 10px 0;
-    background-color: #555;
+    background-color: transparent;
     color: white;
     border: none;
     cursor: pointer;
@@ -1755,8 +1830,9 @@ p.namePriv {
     text-decoration: none;
 }
 
-.navPane button:hover {
-    background-color: #777;
+
+.navPane button:hover, .navPane button:focus, .navPane button:active {
+    background: linear-gradient(150deg, var(--accent-first), var(--accent-second));
 }
 
 .closeButton {
@@ -1770,9 +1846,21 @@ p.namePriv {
     cursor: pointer;
 }
 
+.navLabel {
+    position: absolute;
+    top: 22px;
+    left: 30px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
 .navIcons {
     position: absolute;
-    bottom: 75px;
+    bottom: 85px;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -1785,3 +1873,15 @@ p.namePriv {
     color: var(--font-color);
 }
 
+#navPane > hr {
+    margin: 0 15px;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, var(--accent-first), var(--accent-second));
+}
+
+.grecaptcha-badge { visibility: hidden !important; }
+
+#addressInput {
+    display: none;
+}

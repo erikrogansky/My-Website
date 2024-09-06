@@ -11,7 +11,7 @@
     <link rel="canonical" href="https://roganskyerik.com/" />
     <link rel="alternate" hreflang="en" href="https://roganskyerik.com/" />
     @foreach(config('app.available_locales') as $locale => $language)
-    <link rel="alternate" hreflang="{{ $language }}" href="{{ url()->current() }}/lang/{{ $language }}">
+    <!-- <link rel="alternate" hreflang="{{ $language }}" href="{{ url()->current() }}/lang/{{ $language }}"> -->
     @endforeach
     <link href="/css/styles.css" rel="stylesheet">
     <link rel="icon" href="/img/logo-tr.png">
@@ -19,6 +19,7 @@
     <script src="/scripts/script.js" defer></script>
     <script src="https://kit.fontawesome.com/ac7b36a7a6.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    {!! RecaptchaV3::initJs() !!}
     <title>Erik Roganský</title>
     <script type="application/ld+json">
     {
@@ -28,6 +29,8 @@
       "url" : "https://roganskyerik.com/"
     }
   </script>
+  
+  <script type="text/javascript">(function(u,x,t,w,e,a,k,s){a=function(v){try{u.setItem(t+e,v)}catch(e){}v=JSON.parse(v);for(k=0;k<v.length;k++){s=x.createElement("script");s.text="(function(u,x,t,w,e,a,k){a=u[e]=function(){a.q.push(arguments)};a.q=[];a.t=+new Date;a.c=w;k=x.createElement('script');k.async=1;k.src=t;x.getElementsByTagName('head')[0].appendChild(k)})(window,document,'"+v[k].u+"',"+JSON.stringify(v[k].c)+",'"+v[k].g+"')";x.getElementsByTagName("head")[0].appendChild(s)}};try{k=u.getItem(t+e)}catch(e){}if(k){return a(k)}k=new XMLHttpRequest;k.onreadystatechange=function(){if(k.readyState==4&&k.status==200)a(k.responseText)};k.open("POST",w+e);k.send(x.URL)})(sessionStorage,document,"uxt:","https://api.uxtweak.com/snippet/","a48303c6-5222-49b4-b043-699b25c177c0");</script>
 </head>
 <body>
     <header>
@@ -44,18 +47,21 @@
                     <a href="#contact">{{ __('Contact') }}</a>
                 </div>
             </div>
+            
             <div class="headerLanguage">
-                <img id="selectedLanguage" src="{{ __('/img/us.png') }}" alt="{{ __('ENG') }}">
+                <!-- <img id="selectedLanguage" src="{{ __('/img/us.png') }}" alt="{{ __('ENG') }}">
                 <div class="dropdownContent">
                     <img src="{{ __('/img/sk.png') }}" alt="{{ __('SVK') }}" onclick="location.href = '{{ route('langSwitch', __('sk')) }}';">
                     <img src="{{ __('/img/us.png') }}" alt="{{ __('ENG') }}" onclick="changeLanguage('ENG')" style="display: none;">
-                </div>
+                </div>  -->
             </div>
         </div>
     </header>
 
     <div id="navPane">
+        <label class="navLabel">Menu</label>
         <button class="closeButton fa-solid fa-xmark" onclick="document.getElementById('navPane').style.left = '-300px';"></button>
+        <hr>
         <a href="#intro" onclick="document.getElementById('navPane').style.left = '-300px';">{{ __('Home') }}</a>
         <a href="#services" onclick="document.getElementById('navPane').style.left = '-300px';">{{ __('Services') }}</a>
         <a href="#education" onclick="document.getElementById('navPane').style.left = '-300px';">{{ __('Education') }}</a>
@@ -309,6 +315,7 @@
                 <p class="slide-up">{{ __('If you have any technical problems with or questions regarding the website, please don’t hesitate to contact me using the email below:') }}</p>
                 <div class="contactTextTech">
                     <div class="contactDetailsElement slide-up"><i class="fa-solid fa-wrench"></i><label><strong>{{ __('Tech support:') }} </strong>admin@roganskyerik.com</label></div>
+                    <div class="contactDetailsElement2 slide-up"><i class="fa-solid fa-wrench"></i><label><strong>{{ __('Tech:') }} </strong>admin@roganskyerik.com</label></div>
                 </div>
                 <p class="slide-up">{{ __('Looking forward to hearing from you!') }}</p>
             </div>
@@ -321,6 +328,8 @@
                     <input type="text" placeholder="{{ __('Phone number (optional)') }}" class="basicInput slide-up" name="phone">
                     <input type="text" placeholder="{{ __('Subject') }}" class="basicInput slide-up" name="subject" required>
                     <textarea placeholder="{{ __('Message') }}" class="basicInput slide-up" name="message" required></textarea>
+                    {!! RecaptchaV3::field('send_message') !!}
+                    <input id="addressInput" type="text" placeholder="{{ __('Address') }}" class="basicInput" name="address">
                     <button id="submitButton" class="colorfulButton slide-up">{{ __('Send message') }}</button>
                 </form>
             </div>
@@ -330,8 +339,8 @@
     <footer>
         <div class="footerContainer">
             <div class="copyright">
-                <label>{{ __('Made with ❤️ by Erik Roganský') }}</label>
-                <label>{{ __('© Erik Roganský 2024. All rights reserved.') }}</label>
+                <label>{!! html_entity_decode(__('Made&nbsp;with&nbsp;❤️&nbsp;by Erik&nbsp;Roganský')) !!}</label>
+                <label>{!! html_entity_decode(__('©&nbsp;Erik&nbsp;Roganský&nbsp;2024. All&nbsp;rights&nbsp;reserved.')) !!}</label>
                 <div class="footerIcons">
                     <a href="https://facebook.com/erik.rogansky" target="_blank" class="fa-brands fa-facebook-f"></a>
                     <a href="https://www.linkedin.com/in/erikrogansky/" target="_blank" class="fa-brands fa-linkedin-in"></a>
