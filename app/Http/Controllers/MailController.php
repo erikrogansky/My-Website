@@ -40,9 +40,10 @@ class MailController extends Controller {
         
         $token = $request->input('g-recaptcha-response');
 
+        $apiKey = env('RECAPTCHAV3_APIKEY', false);
  
-        $response = Http::post('https://recaptchaenterprise.googleapis.com/v1/projects/my-website-recap-1725601492278/assessments?key=AIzaSyBbc_EoWhWB7dl9fWQAOJ5w_-gy8s9pSxw', [
-             'event' => [
+        $response = Http::post("https://recaptchaenterprise.googleapis.com/v1/projects/my-website-recap-1725601492278/assessments?key={$apiKey}", [
+            'event' => [
                 'token' => $token,
                 'siteKey' => "6Ld2_zcqAAAAAPO4FWBhvwnSrWKSXYiMRjhKiGQQ",
             ],
